@@ -13,7 +13,7 @@ public partial class User
 
     public int Id { get; set; }
 
-    public string? Socialcredits { get; set; }
+    public double? Socialcredits { get; set; }
 
     public DateOnly DataRegistration { get; set; }
 

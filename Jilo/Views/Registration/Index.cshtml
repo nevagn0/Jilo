@@ -1,9 +1,24 @@
-﻿@{
+﻿@model User
+@{
     ViewData["Title"] = "Registration";
 }
-<form>
-    <div class="text-center">
-        <>
+<form asp-action="Index">
+    <div aligh="center">
+        <label asp-for="Username">Имя</label>
+        <input asp-for="Username" placeholder="Введите ваш никнем" />
+        <span asp-validation-for="Username"></span>s
     </div>
-
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" placeholder="Введите почту"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Passwordhash"></label>
+        <input asp-for="Passwordhash" placeholder="Введите пароль"/>
+        <span asp-validation-for="Passwordhash"></span>
+    </div>
+    <div>
+        <button type="submit">Зарегистрироваться</button>
+    </div>
 </form>
