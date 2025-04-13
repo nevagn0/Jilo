@@ -138,3 +138,11 @@ D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\ref\Jilo.dll
 D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\Jilo.sourcelink.json
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\BCrypt.Net-Next.dll
 D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
