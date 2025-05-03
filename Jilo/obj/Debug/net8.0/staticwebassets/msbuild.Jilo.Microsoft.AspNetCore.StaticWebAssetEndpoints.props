@@ -744,6 +744,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-hIll/\u002BgAGG7HmlvSe/HamC8jwhpkEZcTYg3XTrrXhZg="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"264880"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022hIll/\u002BgAGG7HmlvSe/HamC8jwhpkEZcTYg3XTrrXhZg=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 14:51:42 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Jilo/uploads/cs2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cs2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-mt11a7G8epDTzWgAfHZpbBG5tvP3Fzr3MuE5zpWcVyM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"70416"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022mt11a7G8epDTzWgAfHZpbBG5tvP3Fzr3MuE5zpWcVyM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 15:42:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Jilo/uploads/cs2.uqq0fri7z1.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cs2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"uqq0fri7z1"},{"Name":"integrity","Value":"sha256-mt11a7G8epDTzWgAfHZpbBG5tvP3Fzr3MuE5zpWcVyM="},{"Name":"label","Value":"_content/Jilo/uploads/cs2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"70416"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022mt11a7G8epDTzWgAfHZpbBG5tvP3Fzr3MuE5zpWcVyM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 15:42:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Jilo/uploads/dota2.3dcnnexots.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dota2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3dcnnexots"},{"Name":"integrity","Value":"sha256-Vx1HxO5gEhtvfcTMSUW4JNgwqP\u002B2EzcEukKivtqGWy4="},{"Name":"label","Value":"_content/Jilo/uploads/dota2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"219177"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Vx1HxO5gEhtvfcTMSUW4JNgwqP\u002B2EzcEukKivtqGWy4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 15:38:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Jilo/uploads/dota2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dota2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Vx1HxO5gEhtvfcTMSUW4JNgwqP\u002B2EzcEukKivtqGWy4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"219177"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022Vx1HxO5gEhtvfcTMSUW4JNgwqP\u002B2EzcEukKivtqGWy4=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 May 2025 15:38:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Jilo/uploads/foto.1jyd5saj5v.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\foto.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

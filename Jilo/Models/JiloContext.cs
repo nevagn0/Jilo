@@ -68,6 +68,14 @@ public partial class JiloContext : DbContext
             entity.Property(e => e.Name)
                 .HasColumnType("character varying")
                 .HasColumnName("name");
+
+            modelBuilder.Entity<Game>().HasData(
+        new Game { Id = 1, Name = "Dota 2", Discrip = "MOBA-игра", Avatar = "/images/games/dota2.jpg" },
+        new Game { Id = 2, Name = "CS:GO", Discrip = "Тактический шутер", Avatar = "/images/games/csgo.jpg" },
+        new Game { Id = 3, Name = "Valorant", Discrip = "Командный шутер", Avatar = "/images/games/valorant.jpg" },
+        new Game { Id = 4, Name = "League of Legends", Discrip = "MOBA", Avatar = "/images/games/lol.jpg" }
+    );
+
         });
 
         modelBuilder.Entity<GamesUser>(entity =>

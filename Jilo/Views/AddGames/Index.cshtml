@@ -1,0 +1,53 @@
+﻿@model List<Game>
+@{
+    ViewData["Title"] = "Выбор игр";
+}
+<div class="container">
+    <h2 class="my-4">Выберите свои игры</h2>
+
+    <div class="row">
+        @foreach (var game in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="@game.Avatar" class="card-img-top" alt="@game.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@game.Name</h5>
+                        <p class="card-text">@game.Discrip</p>
+
+                        <form asp-action="AddGame"  method="post">
+                            <input type="hidden" name="gameId" value="@game.Id" />
+
+                            <div class="mb-3">
+                                <label class="form-label">Ранг</label>
+                                <select name="rank" class="form-select">
+                                    <option value="Новичок">Новичок</option>
+                                    <option value="Любитель">Любитель</option>
+                                    <option value="Опытный">Опытный</option>
+                                    <option value="Эксперт">Эксперт</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Роль</label>
+                                <input type="text" name="role" class="form-control" placeholder="Ваша роль в игре" value="Игрок">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Добавить игру</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<style>
+    .card {
+        transition: transform 0.3s;
+    }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+        }
+</style>
