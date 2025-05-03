@@ -249,16 +249,24 @@
       "PackagePath": "staticwebassets\\uploads\\71279ba0-4958-40a6-bf31-8bebfeece044_scale_1200.png"
     },
     {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\RareGovnishe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\RareGovnishe.jpg"
+    },
+    {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\cs2.png",
       "PackagePath": "staticwebassets\\uploads\\cs2.png"
     },
     {
-      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.png",
-      "PackagePath": "staticwebassets\\uploads\\dota2.png"
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dota2.jpg"
     },
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\foto.jpg",
       "PackagePath": "staticwebassets\\uploads\\foto.jpg"
+    },
+    {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\govnishe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\govnishe.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Jilo.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

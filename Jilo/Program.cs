@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.AspNetCore.StaticFiles;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -51,18 +50,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseStaticFiles(new StaticFileOptions
-{
-    ContentTypeProvider = new FileExtensionContentTypeProvider
-    {
-        Mappings =
-        {
-            [".png"] = "image/png",
-            [".jpg"] = "image/jpeg",
-            [".jpeg"] = "image/jpeg"
-        }
-    }
-});
+
 app.UseRouting();
 using (var scope = app.Services.CreateScope())
 {
@@ -72,10 +60,10 @@ using (var scope = app.Services.CreateScope())
     {
         var games = new List<Game>
         {
-            new Game { Name = "Dota 2", Discrip = "MOBA-игра", Avatar = "/uploads/dota2.png" },
-            /*new Game { Name = "CS:GO", Discrip = "Тактический шутер", Avatar = "/uploads/cs2" },
-            new Game { Name = "Valorant", Discrip = "Командный шутер", Avatar = "/images/games/valorant.jpg" },
-            new Game { Name = "League of Legends", Discrip = "MOBA", Avatar = "/images/games/lol.jpg" }*/
+            new Game { Name = "Dota 2", Discrip = "MOBA-игра", Avatar = "/uploads/dota2" },
+            new Game { Name = "CS:GO", Discrip = "Тактический шутер", Avatar = "/uploads/cs2" },
+            new Game { Name = "Valorant", Discrip = "Командный шутер", Avatar = "/uploads/govnishe" },
+            new Game { Name = "League of Legends", Discrip = "MOBA", Avatar = "/uploads/RareGovnishe" }
         };
 
         await dbContext.Games.AddRangeAsync(games);

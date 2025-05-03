@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rAYqldSbppicoiJaBZfAoTrV3LZUroSF1mV8XWmOjo4=",
+  "Hash": "fIOjwmPgSymC1ur3uyJ3QyCdITndc61qc9k3Td5esDU=",
   "Source": "Jilo",
   "BasePath": "_content/Jilo",
   "Mode": "Default",
@@ -1361,12 +1361,12 @@
       "OriginalItemSpec": "wwwroot\\uploads\\cs2.png"
     },
     {
-      "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.png",
+      "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.jpg",
       "SourceId": "Jilo",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\",
       "BasePath": "_content/Jilo",
-      "RelativePath": "uploads/dota2#[.{fingerprint}]?.png",
+      "RelativePath": "uploads/dota2#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1379,7 +1379,7 @@
       "Integrity": "Vx1HxO5gEhtvfcTMSUW4JNgwqP+2EzcEukKivtqGWy4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploads\\dota2.png"
+      "OriginalItemSpec": "wwwroot\\uploads\\dota2.jpg"
     },
     {
       "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\foto.jpg",
@@ -1401,6 +1401,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\foto.jpg"
+    },
+    {
+      "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\govnishe.jpg",
+      "SourceId": "Jilo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\",
+      "BasePath": "_content/Jilo",
+      "RelativePath": "uploads/govnishe#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "27l25kdjps",
+      "Integrity": "MqM9Nb/aoOqKTTOsDQQs9+Zy0+RiiZ3ih0Jf/gzQ470=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\govnishe.jpg"
+    },
+    {
+      "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\RareGovnishe.jpg",
+      "SourceId": "Jilo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\",
+      "BasePath": "_content/Jilo",
+      "RelativePath": "uploads/RareGovnishe#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ineq3ogo33",
+      "Integrity": "rg+lGtdGW2FBgmRyNjKUAuD5slgx1qgLFd5Zh5iE24g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\RareGovnishe.jpg"
     }
   ],
   "Endpoints": [
@@ -6653,8 +6695,8 @@
       ]
     },
     {
-      "Route": "uploads/dota2.3dcnnexots.png",
-      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.png",
+      "Route": "uploads/dota2.3dcnnexots.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6667,7 +6709,7 @@
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
@@ -6689,7 +6731,7 @@
         },
         {
           "Name": "label",
-          "Value": "uploads/dota2.png"
+          "Value": "uploads/dota2.jpg"
         },
         {
           "Name": "integrity",
@@ -6698,8 +6740,8 @@
       ]
     },
     {
-      "Route": "uploads/dota2.png",
-      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.png",
+      "Route": "uploads/dota2.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6712,7 +6754,7 @@
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
@@ -6813,6 +6855,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-85pluJntLGW77andwMuwuW0AiUYidx7ql86Xmm7AtlI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/govnishe.27l25kdjps.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\govnishe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41299"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MqM9Nb/aoOqKTTOsDQQs9+Zy0+RiiZ3ih0Jf/gzQ470=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 19:17:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "27l25kdjps"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/govnishe.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MqM9Nb/aoOqKTTOsDQQs9+Zy0+RiiZ3ih0Jf/gzQ470="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/govnishe.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\govnishe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41299"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MqM9Nb/aoOqKTTOsDQQs9+Zy0+RiiZ3ih0Jf/gzQ470=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 19:17:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MqM9Nb/aoOqKTTOsDQQs9+Zy0+RiiZ3ih0Jf/gzQ470="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/RareGovnishe.ineq3ogo33.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\RareGovnishe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rg+lGtdGW2FBgmRyNjKUAuD5slgx1qgLFd5Zh5iE24g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 19:20:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ineq3ogo33"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/RareGovnishe.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rg+lGtdGW2FBgmRyNjKUAuD5slgx1qgLFd5Zh5iE24g="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/RareGovnishe.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\RareGovnishe.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64271"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rg+lGtdGW2FBgmRyNjKUAuD5slgx1qgLFd5Zh5iE24g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 19:20:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rg+lGtdGW2FBgmRyNjKUAuD5slgx1qgLFd5Zh5iE24g="
         }
       ]
     }
