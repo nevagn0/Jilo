@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Registration";
 }
-<form asp-action="Index">
+<form asp-action="Index" enctype="multipart/form-data" method="post">
     <div aligh="center">
         <label asp-for="Username">Имя</label>
         <input asp-for="Username" placeholder="Введите ваш никнем" />
@@ -17,6 +17,10 @@
         <label asp-for="Passwordhash"></label>
         <input asp-for="Passwordhash" placeholder="Введите пароль"/>
         <span typeof="passsword" asp-validation-for="Passwordhash"></span>
+    </div>
+    <div>
+        <label asp-for="Avatar">Фото</label>
+        <input asp-for="Avatar" type="file" name="avatarFile" accept="image/*" />
     </div>
     <div>
         <button type="submit">Зарегистрироваться</button>

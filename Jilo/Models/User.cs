@@ -21,7 +21,9 @@ public partial class User
 
     public DateOnly? LastOnline { get; set; }
 
-    public string? UsersComs { get; set; }
+    public string? Comm { get; set; }
+
+    public double? Grade { get; set; }
 
     public virtual ICollection<Comm> Comms { get; set; } = new List<Comm>();
 

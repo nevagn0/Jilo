@@ -38,7 +38,13 @@ namespace Jilo.Controllers
             var token = GenerateJWT(us);
             Console.WriteLine($"Generated token: {token}");
 
-            return RedirectToAction("Index", "Home");
+            Response.Cookies.Append("jwt", token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+            });
+            return RedirectToAction("Index", "MainPage");
         }
 
         private string GenerateJWT(User user)
@@ -55,6 +61,7 @@ namespace Jilo.Controllers
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
                 claims: claims,
+                expires: DateTime.UtcNow.AddHours(1),
                 signingCredentials: Credentional
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
