@@ -3,14 +3,15 @@
 	ViewData["Title"] = "MainPage";
 }
 <form asp-action="Index">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="~/css/site.css" />
 
-	<div>vsvsdvdsvdsvsdvs</div>
+		<button class="avatar" asp-controller="ProfileUser" asp-action="Profile">
+		<img src="@Model.Avatar" alt="Аватарка" style="width: 100px; height: 100px; border-radius: 50%;" />
+		</button>
 
-	<div>@Model.Username</div>
+		<div>
+			<button asp-controller="AddGames" asp-action="AddGame">добавить игру</button>
+		</div>
 
-	<img align="right" src="@Model.Avatar" alt="Аватарка" style="width: 100px; height: 100px; border-radius: 50%;" />
-
-	<div>
-		<button asp-controller="AddGames" asp-action="AddGame">добавить игру</button>
-	</div>
 </form>

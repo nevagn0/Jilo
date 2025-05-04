@@ -20,3 +20,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+.avatar {
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    border-radius: 60px;
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    
+}

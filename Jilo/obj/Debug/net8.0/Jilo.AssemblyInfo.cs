@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jilo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08fffafbcde16b26e6d0512de8199815d671d0b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51cb932bd726746a37ba9a6ef627a9efe726576a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jilo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jilo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

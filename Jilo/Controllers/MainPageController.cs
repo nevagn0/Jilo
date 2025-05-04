@@ -32,8 +32,8 @@ namespace Jilo.Controllers
         }
         public IActionResult Exit()
         {
-            
-            return RedirectToAction("Index","HomePage");
+
+            return RedirectToAction("Index", "HomePage");
         }
     }
 }

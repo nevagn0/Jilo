@@ -26,7 +26,7 @@ namespace Jilo.Controllers
         [HttpPost]
         public async Task<IActionResult> Authorization(User user)
         {
-            var us = _context.Users.FirstOrDefault(f => f.Username == user.Username);
+            var us = await _context.Users.FirstOrDefaultAsync(f => f.Username == user.Username);
             bool IsValid = BCrypt.Net.BCrypt.Verify(user.Passwordhash, us.Passwordhash);
 
             if (!IsValid || us == null)
