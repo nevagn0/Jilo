@@ -4,6 +4,9 @@
 }
 <form asp-action="Index" enctype="multipart/form-data" method="post">
     <div aligh="center">
+        <div>
+            <button asp-controller="Back" asp-action="RegistrationBack">Назад</button>
+        </div>
         <label asp-for="Username">Имя</label>
         <input asp-for="Username" placeholder="Введите ваш никнем" />
         <span asp-validation-for="Username"></span>

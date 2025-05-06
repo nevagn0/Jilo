@@ -36,7 +36,7 @@ namespace Jilo.Controllers
             }
 
             var token = GenerateJWT(us);
-            Console.WriteLine($"Generated token: {token}");
+            Console.WriteLine($"Generated token: {token}"); 
 
             Response.Cookies.Append("jwt", token, new CookieOptions
             {
@@ -66,5 +66,6 @@ namespace Jilo.Controllers
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+        
     }
 }

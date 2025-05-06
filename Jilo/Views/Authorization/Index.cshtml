@@ -3,6 +3,9 @@
     ViewData["Title"] = "Authorization";
 }
 <form asp-action="Index">
+    <div>
+        <button asp-controller="Back" asp-action="AuthorizationBack">Назад</button>
+    </div>
     <div aligh="center">
         <label asp-for="Username">Имя</label>
         <input asp-for="Username" placeholder="Введите ваш никнем" />

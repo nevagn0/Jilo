@@ -1,10 +1,13 @@
 ﻿@model List<Game>
 @{
     ViewData["Title"] = "Выбор игр";
-}
+}   
+<form asp-action="AddGame"  method="post">
 <div class="container">
     <h2 class="my-4">Выберите свои игры</h2>
-
+    <div>
+        <button asp-controller="Back" asp-action="AddGames">Назад</button>
+    </div>
     <div class="row">
         @foreach (var game in Model)
         {
@@ -15,7 +18,6 @@
                         <h5 class="card-title">@game.Name</h5>
                         <p class="card-text">@game.Discrip</p>
 
-                        <form asp-action="AddGame"  method="post">
                             <input type="hidden" name="gameId" value="@game.Id" />
 
                             <div class="mb-3">
@@ -34,13 +36,13 @@
                             </div>
 
                             <button type="submit" class="btn btn-primary w-100">Добавить игру</button>
-                        </form>
                     </div>
                 </div>
             </div>
         }
     </div>
 </div>
+</form>
 <style>
     .card {
         transition: transform 0.3s;

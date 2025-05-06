@@ -46,7 +46,7 @@ namespace Jilo.Controllers
             }
             else
             {
-                user.Avatar = "/uploads/foto";
+                user.Avatar = "/uploads/foto.jpg";
             }
             user.Passwordhash = BCrypt.Net.BCrypt.HashPassword(user.Passwordhash, 12);
             user.DataRegistration = DateOnly.FromDateTime(DateTime.Now);

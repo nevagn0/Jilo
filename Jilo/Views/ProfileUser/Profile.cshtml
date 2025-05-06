@@ -3,9 +3,17 @@
     ViewData["Title"] = "Profile";
 }
 
+<form asp-action="Index">
+    <div>
+        <button asp-controller="Back" asp-action="AddGames">Назад</button>
+    </div>
+    <div>
+        <button asp-controller="Back" asp-action="Exit">Выход</button>
+    </div>
 <div class="profile-container">
     <img src="@Model.Avatar" class="avatar" alt="Аватар" style="width: 100px; border-radius: 50%;">
     <h1>Профиль пользователя @Model.Username</h1>
+    <a>Дата регистраии пользователя: @Model.DataRegistration</a>
     <p>Всего игр: @ViewBag.GameCount</p>
 
     @if (ViewBag.AllGames != null && ViewBag.AllGames.Count > 0)
@@ -27,3 +35,4 @@
         <p>У пользователя пока нет игр</p>
     }
 </div>
+</form>
