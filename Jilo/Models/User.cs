@@ -19,7 +19,7 @@ public partial class User
 
     public string? Avatar { get; set; }
 
-    public DateOnly? LastOnline { get; set; }
+    public DateTime? LastOnline { get; set; }
 
     public string? Comm { get; set; }
 

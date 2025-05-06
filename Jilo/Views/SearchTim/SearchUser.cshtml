@@ -1,0 +1,26 @@
+﻿@model List<User>
+@{
+	ViewData["Title"] = "Search";
+}
+<form asp-controller="SearchTim" asp-action="SearchUser" method="get">
+    <div class="search-box">
+        <input type="text" name="name" placeholder="Введите имя или email...">
+        <button type="submit" asp-controller="SearchTim" asp-action="UserFind">Поиск</button>
+    </div>
+    <div class="user-list">
+        @if(Model != null && Model.Any())
+        {
+            @foreach(var user in Model)
+            {
+                <div class="user-card">
+                    <img src="@user.Avatar" alt="@user.Username" class="user-avatar">
+                    <span>@user.Username</span>
+                </div>
+            }
+        }
+        else
+        {
+            <a>Пользователь не найден</a>
+        }
+    </div>
+</form>

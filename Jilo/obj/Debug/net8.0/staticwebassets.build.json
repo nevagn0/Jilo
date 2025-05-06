@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RTOdAkkzFeoYBLY8WihboK6d2MNmEbijeFJ9OxR0/oo=",
+  "Hash": "GlXTnuuQvDXtTO1ZuTD7R3lx7wcca71Iv/PaLbV15Rk=",
   "Source": "Jilo",
   "BasePath": "_content/Jilo",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "bc3rqe6p37",
-      "Integrity": "qzvwefMlhRMybZlw4cyP6ylfnANwAwbJkK2Zd2cnFZI=",
+      "Fingerprint": "m9n52hr002",
+      "Integrity": "9iQlS/f16Ne/iFujcH4gRsKe9dJsZmxXu5hzYkv1rXk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1489,51 +1489,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.bc3rqe6p37.css",
-      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "555"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qzvwefMlhRMybZlw4cyP6ylfnANwAwbJkK2Zd2cnFZI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:09:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "bc3rqe6p37"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qzvwefMlhRMybZlw4cyP6ylfnANwAwbJkK2Zd2cnFZI="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1544,7 +1499,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "555"
+          "Value": "1356"
         },
         {
           "Name": "Content-Type",
@@ -1552,11 +1507,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qzvwefMlhRMybZlw4cyP6ylfnANwAwbJkK2Zd2cnFZI=\""
+          "Value": "\"9iQlS/f16Ne/iFujcH4gRsKe9dJsZmxXu5hzYkv1rXk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:09:16 GMT"
+          "Value": "Tue, 06 May 2025 18:28:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1566,7 +1521,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qzvwefMlhRMybZlw4cyP6ylfnANwAwbJkK2Zd2cnFZI="
+          "Value": "sha256-9iQlS/f16Ne/iFujcH4gRsKe9dJsZmxXu5hzYkv1rXk="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.m9n52hr002.css",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1356"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9iQlS/f16Ne/iFujcH4gRsKe9dJsZmxXu5hzYkv1rXk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 18:28:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m9n52hr002"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9iQlS/f16Ne/iFujcH4gRsKe9dJsZmxXu5hzYkv1rXk="
         }
       ]
     },

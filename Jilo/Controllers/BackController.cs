@@ -7,6 +7,11 @@ namespace Jilo.Controllers
 {
     public class BackController : Controller
     {
+        private readonly JiloContext _context;
+        public BackController(JiloContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
@@ -29,8 +34,18 @@ namespace Jilo.Controllers
 
         public IActionResult Exit()
         {
-            var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            var token = Request.Cookies["jwt"];
             Console.WriteLine($"Токен перед выходом: {token}");
+
+            var username = User.Identity?.Name;
+            Console.WriteLine($"Имя пользователя: {username}");
+
+            var user = _context.Users.FirstOrDefault(v => v.Username == username);
+
+            user.LastOnline = DateTime.UtcNow;// Сохранит текущие дату и время
+            Console.WriteLine($"{user.Username}");
+            Console.WriteLine(user.LastOnline);
+            _context.SaveChanges();
 
             Response.Cookies.Delete("jwt");
 
