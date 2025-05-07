@@ -39,6 +39,7 @@ namespace Jilo.Controllers
             {
                 return NotFound();
             }
+
             ViewBag.Comments = _context.Comms
             .Where(c => c.Targetuser == user.Id)
             .Include(c => c.IdUserNavigation) 
@@ -71,12 +72,6 @@ namespace Jilo.Controllers
             _context.Comms.Add(newComm);
             await _context.SaveChangesAsync();
 
-            
-            var targetUserNov = await _context.Users
-                .Include(u => u.GamesUsers)
-                .ThenInclude(g => g.IdGameNavigation)
-                .Include(u => u.Comms)
-                .FirstOrDefaultAsync(u => u.Id == targetUser);
 
             return RedirectToAction("SearchUser");
         }
