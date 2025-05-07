@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace Jilo.Controllers
 {
@@ -14,15 +15,17 @@ namespace Jilo.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             var username = User.Identity?.Name;
             if (username == null)
             {
                 return RedirectToAction("Index", "Authorization");
             }
+            var user = await _context.Users.FirstOrDefaultAsync(x => x.Username == username);
+            user.LastOnline = DateTime.Now;
+             _context.SaveChanges();
 
-            var user = _context.Users.FirstOrDefault(u => u.Username == username);
             if (user == null)
             {
                 return RedirectToAction("Index", "Authorization");

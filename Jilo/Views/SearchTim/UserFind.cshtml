@@ -2,7 +2,6 @@
 @{
     ViewData["Title"] = "UserFind";
 }
-<form asp-controller="SearchTim" asp-action="UserFind">
     <div class="profile-container">
         <div class="profile-header">
             <img src="@Model.Avatar" class="profile-avatar">
@@ -21,5 +20,27 @@
                 </div>
             }
         </div>
+
+        <div>
+            <h2>Комментарии:</h2>
+            @foreach (var comm in ViewBag.Comments)
+            {
+                <div class="comment">
+                <img src="@Model.Avatar" />
+                    <p><strong>@comm.IdUserNavigation.Username:</strong> @comm.Comm1</p>
+                    <p>Оценка: @comm.Grade</p>
+                </div>
+            }
+        </div>
+
+        <form asp-controller="SearchTim" asp-action="AddComm" method="post">
+            <input type="hidden" name="targetUser" value="@Model.Id" />
+            <div>
+                <input type="text" name="comm" placeholder="Напишите комментарий" />
+            </div>
+            <div>
+                <input type="number" name="grade" min="1" max="5" step="0.1" placeholder="Оценка (1-5)" />
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
     </div>
-</form> 

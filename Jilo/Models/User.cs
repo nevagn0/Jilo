@@ -28,4 +28,6 @@ public partial class User
     public virtual ICollection<Comm> Comms { get; set; } = new List<Comm>();
 
     public virtual ICollection<GamesUser> GamesUsers { get; set; } = new List<GamesUser>();
+
+
 }

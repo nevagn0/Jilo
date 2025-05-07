@@ -45,6 +45,8 @@ namespace Jilo.Controllers
                 SameSite = SameSiteMode.Strict,
             });
             return RedirectToAction("Index", "MainPage");
+            
+            
         }
 
         private string GenerateJWT(User user)

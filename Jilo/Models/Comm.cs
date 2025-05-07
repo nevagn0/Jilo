@@ -7,11 +7,14 @@ public partial class Comm
 {
     public int Id { get; set; }
 
-    public int IdUser { get; set; }
+    public int? IdUser { get; set; }
+    
+    public string? Comm1 { get; set; }
 
-    public string Comm1 { get; set; } = null!;
+    public double? Grade { get; set; }
 
-    public double Grade { get; set; }
+    public int? Targetuser { get; set; }
 
-    public virtual User IdUserNavigation { get; set; } = null!;
+    public virtual User? IdUserNavigation { get; set; }
+
 }

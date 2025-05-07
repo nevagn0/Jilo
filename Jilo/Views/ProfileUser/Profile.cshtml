@@ -37,5 +37,25 @@
     {
         <p>У пользователя пока нет игр</p>
     }
+        <div>
+            <h2>Комментарии:</h2>
+            @if (ViewBag.Comments != null && ViewBag.Comments.Count > 0)
+            {
+                @foreach (var comm in ViewBag.Comments)
+                {
+                    <div class="comment">
+                        <img src="@comm.IdUserNavigation?.Avatar" class="comment-avatar" />
+                        <div>
+                            <p><strong>@comm.IdUserNavigation?.Username:</strong> @comm.Comm1</p>
+                            <p>Оценка: @comm.Grade</p>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Пока нет комментариев</p>
+            }
+        </div>
 </div>
 </form>

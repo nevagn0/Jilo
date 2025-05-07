@@ -43,10 +43,10 @@ public partial class JiloContext : DbContext
                 .HasColumnName("comm");
             entity.Property(e => e.Grade).HasColumnName("grade");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
+            entity.Property(e => e.Targetuser).HasColumnName("targetuser");
 
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Comms)
                 .HasForeignKey(d => d.IdUser)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("comm_user_fk");
         });
 
@@ -119,7 +119,9 @@ public partial class JiloContext : DbContext
                 .HasColumnType("character varying")
                 .HasColumnName("email");
             entity.Property(e => e.Grade).HasColumnName("grade");
-            entity.Property(e => e.LastOnline).HasColumnName("last_online");
+            entity.Property(e => e.LastOnline)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("last_online");
             entity.Property(e => e.Passwordhash)
                 .HasColumnType("character varying")
                 .HasColumnName("passwordhash");

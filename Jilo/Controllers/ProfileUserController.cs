@@ -1,4 +1,5 @@
-﻿using Jilo.Models;
+﻿using System.Security.Claims;
+using Jilo.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -39,7 +40,15 @@ namespace Jilo.Controllers
             // сами игры
             var AllGames = await _context.GamesUsers.Where(t => t.IdUser == userr.Id).Include(t => t.IdGameNavigation).ToListAsync();
             ViewBag.AllGames = AllGames;
+
+            ViewBag.Comments = _context.Comms
+            .Where(c => c.Targetuser == userr.Id)
+            .Include(c => c.IdUserNavigation)
+            .ToList();
+
             return View(userr);
+
+
         }
     }
 }
