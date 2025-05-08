@@ -42,7 +42,7 @@ namespace Jilo.Controllers
 
             var user = _context.Users.FirstOrDefault(v => v.Username == username);
 
-            user.LastOnline = DateTime.Now;// Сохранит текущие дату и время
+            user.LastOnline = DateTime.Now;
             Console.WriteLine($"{user.Username}");
             Console.WriteLine(user.LastOnline);
             _context.SaveChanges();

@@ -46,9 +46,11 @@ namespace Jilo.Controllers
             .Include(c => c.IdUserNavigation)
             .ToList();
 
+            var SocialCredits = await _context.Comms.Where(t => t.Targetuser == userr.Id).AverageAsync(t => t.Grade);
+            ViewBag.SocialCredits = SocialCredits;
             return View(userr);
 
-
+            
         }
     }
 }
