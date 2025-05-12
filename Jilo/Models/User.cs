@@ -25,9 +25,13 @@ public partial class User
 
     public double? Grade { get; set; }
 
+    public string? Role { get; set; }
+
+    public string? Discription { get; set; }
+
+    public virtual ICollection<Advertisement> Advertisements { get; set; } = new List<Advertisement>();
+
     public virtual ICollection<Comm> Comms { get; set; } = new List<Comm>();
 
     public virtual ICollection<GamesUser> GamesUsers { get; set; } = new List<GamesUser>();
-
-
 }

@@ -1,0 +1,27 @@
+﻿@model Jilo.Models.Advertisement
+
+<h2>Создать объявление</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Discription">Описание</label>
+        <textarea asp-for="Discription" class="form-control"></textarea>
+        <span asp-validation-for="Discription" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Выберите игры:</label>
+        @foreach (var game in ViewBag.AllGames)
+        {
+            <div class="form-check">
+                <input type="checkbox"
+                       name="selectedGameIds"
+                       value="@game.Id"
+                       class="form-check-input" />
+                <label class="form-check-label">@game.Name</label>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Создать</button>
+</form>

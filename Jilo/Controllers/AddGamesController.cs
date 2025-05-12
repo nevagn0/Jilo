@@ -32,7 +32,7 @@ namespace Jilo.Controllers
                 if (!User.Identity.IsAuthenticated)
                 {
                     Console.WriteLine("Пользователь не аутентифицирован");
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("Index", "Authorization");
                 }
 
                 Console.WriteLine($"Получен gameId: {gameId}");
@@ -52,7 +52,7 @@ namespace Jilo.Controllers
                 if (user == null)
                 {
                     Console.WriteLine($"Пользователь {username} не найден");
-                    return RedirectToAction("Login", "Account");
+                    return RedirectToAction("Index", "Authorization");
                 }
 
 

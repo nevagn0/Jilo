@@ -15,6 +15,10 @@ public partial class JiloContext : DbContext
     {
     }
 
+    public virtual DbSet<AdverstmentCreate> AdverstmentCreates { get; set; }
+
+    public virtual DbSet<Advertisement> Advertisements { get; set; }
+
     public virtual DbSet<Comm> Comms { get; set; }
 
     public virtual DbSet<Game> Games { get; set; }
@@ -29,6 +33,51 @@ public partial class JiloContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<AdverstmentCreate>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("adverstment_create_pk");
+
+            entity.ToTable("adverstment_create");
+
+            entity.Property(e => e.Id)
+                .UseIdentityAlwaysColumn()
+                .HasColumnName("id");
+            entity.Property(e => e.IdAdversment).HasColumnName("id_adversment");
+            entity.Property(e => e.IdGame).HasColumnName("id_game");
+
+            entity.HasOne(d => d.IdAdversmentNavigation).WithMany(p => p.AdverstmentCreates)
+                .HasForeignKey(d => d.IdAdversment)
+                .HasConstraintName("adverstment_create_advertisement_fk");
+
+            entity.HasOne(d => d.IdGameNavigation).WithMany(p => p.AdverstmentCreates)
+                .HasForeignKey(d => d.IdGame)
+                .HasConstraintName("adverstment_create_games_fk");
+        });
+
+        modelBuilder.Entity<Advertisement>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("advertisement_pk");
+
+            entity.ToTable("advertisement");
+
+            entity.Property(e => e.Id)
+                .UseIdentityAlwaysColumn()
+                .HasColumnName("id");
+            entity.Property(e => e.DateCreate)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("date_create");
+            entity.Property(e => e.Discription)
+                .HasColumnType("character varying")
+                .HasColumnName("discription");
+            entity.Property(e => e.Games).HasColumnName("games");
+            entity.Property(e => e.IdTim).HasColumnName("id_tim");
+            entity.Property(e => e.IdUser).HasColumnName("id_user");
+
+            entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Advertisements)
+                .HasForeignKey(d => d.IdUser)
+                .HasConstraintName("advertisement_user_fk");
+        });
+
         modelBuilder.Entity<Comm>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("comm_pk");
@@ -115,6 +164,9 @@ public partial class JiloContext : DbContext
                 .HasColumnType("character varying")
                 .HasColumnName("comm");
             entity.Property(e => e.DataRegistration).HasColumnName("data_registration");
+            entity.Property(e => e.Discription)
+                .HasColumnType("character varying")
+                .HasColumnName("discription");
             entity.Property(e => e.Email)
                 .HasColumnType("character varying")
                 .HasColumnName("email");
@@ -125,6 +177,9 @@ public partial class JiloContext : DbContext
             entity.Property(e => e.Passwordhash)
                 .HasColumnType("character varying")
                 .HasColumnName("passwordhash");
+            entity.Property(e => e.Role)
+                .HasDefaultValueSql("'\"USER\"'::character varying")
+                .HasColumnType("character varying");
             entity.Property(e => e.Socialcredits).HasColumnName("socialcredits");
             entity.Property(e => e.Username)
                 .HasMaxLength(30)
