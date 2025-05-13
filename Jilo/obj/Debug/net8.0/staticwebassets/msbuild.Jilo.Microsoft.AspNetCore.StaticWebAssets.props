@@ -1116,6 +1116,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\085db39af6bdf1f0d607584bd8f105d3.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Jilo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Jilo</BasePath>
+      <RelativePath>uploads/23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>wmljghxpbh</Fingerprint>
+      <Integrity>uMd+h/fknE/T34i6K7xHmSiOJ8q563dq6IRbWleDPoM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\71279ba0-4958-40a6-bf31-8bebfeece044_scale_1200.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Jilo</SourceId>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GlXTnuuQvDXtTO1ZuTD7R3lx7wcca71Iv/PaLbV15Rk=",
+  "Hash": "qNbXa/88/uJJ4iDJzCkBWhr2DSmP/hs0AaOYs9rFk+4=",
   "Source": "Jilo",
   "BasePath": "_content/Jilo",
   "Mode": "Default",
@@ -1338,6 +1338,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\085db39af6bdf1f0d607584bd8f105d3.jpg"
+    },
+    {
+      "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg",
+      "SourceId": "Jilo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\",
+      "BasePath": "_content/Jilo",
+      "RelativePath": "uploads/23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wmljghxpbh",
+      "Integrity": "uMd+h/fknE/T34i6K7xHmSiOJ8q563dq6IRbWleDPoM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg"
     },
     {
       "Identity": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\71279ba0-4958-40a6-bf31-8bebfeece044_scale_1200.png",
@@ -6647,6 +6668,88 @@
         {
           "Name": "label",
           "Value": "uploads/085db39af6bdf1f0d607584bd8f105d3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uMd+h/fknE/T34i6K7xHmSiOJ8q563dq6IRbWleDPoM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uMd+h/fknE/T34i6K7xHmSiOJ8q563dq6IRbWleDPoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 13:52:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uMd+h/fknE/T34i6K7xHmSiOJ8q563dq6IRbWleDPoM="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.wmljghxpbh.jpg",
+      "AssetFile": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97588"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uMd+h/fknE/T34i6K7xHmSiOJ8q563dq6IRbWleDPoM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 13:52:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wmljghxpbh"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg"
         },
         {
           "Name": "integrity",

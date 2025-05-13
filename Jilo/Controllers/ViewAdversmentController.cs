@@ -31,6 +31,7 @@ namespace Jilo.Controllers
         public async Task<IActionResult> RespondToAd(int idUser, int idGame)
         {
             var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var currentUserName = User.Identity?.Name;
 
             var advertisement = await _context.AdversmetUsers
                 .FirstOrDefaultAsync(a => a.IdUser == idUser && a.IdGame == idGame);
@@ -47,6 +48,7 @@ namespace Jilo.Controllers
             }
 
             advertisement.IdSecondUser = currentUserId;
+            advertisement.NameSecondUser = currentUserName;
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Вы успешно откликнулись на объявление";

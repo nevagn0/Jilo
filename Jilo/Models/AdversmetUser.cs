@@ -15,6 +15,8 @@ public partial class AdversmetUser
 
     public int? IdSecondUser { get; set; }
 
+    public string? NameSecondUser { get; set; }
+
     public virtual Game IdGameNavigation { get; set; } = null!;
 
     public virtual User IdUserNavigation { get; set; } = null!;

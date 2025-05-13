@@ -47,6 +47,9 @@ public partial class JiloContext : DbContext
             entity.Property(e => e.IdGame).HasColumnName("id_game");
             entity.Property(e => e.IdSecondUser).HasColumnName("id_second_user");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
+            entity.Property(e => e.NameSecondUser)
+                .HasColumnType("character varying")
+                .HasColumnName("name_second_user");
 
             entity.HasOne(d => d.IdGameNavigation).WithMany()
                 .HasForeignKey(d => d.IdGame)
