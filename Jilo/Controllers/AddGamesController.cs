@@ -25,7 +25,7 @@ namespace Jilo.Controllers
         }   
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddGame(int gameId, string? rank, string? role)
+        public async Task<IActionResult> AddGame(int gameId, string? rank, string? role, string TimeInGame)
         {
             try
             {
@@ -55,6 +55,7 @@ namespace Jilo.Controllers
                     return RedirectToAction("Index", "Authorization");
                 }
 
+                
 
                 if (await _context.GamesUsers.AnyAsync(gu => gu.IdUser == user.Id && gu.IdGame == gameId))
                 {
@@ -68,6 +69,7 @@ namespace Jilo.Controllers
                     IdUser = user.Id,
                     IdGame = gameId,
                     Rank = rank ?? "Не указано",
+                    TimeInGame = TimeInGame,
                     Role = role ?? "Игрок"
                 };
 

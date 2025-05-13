@@ -1,0 +1,52 @@
+﻿@model List<AdversmetUser>
+@{
+    ViewData["Title"] = "Все объявления";
+}
+
+<div class="container">
+    <h1>Список объявлений</h1>
+
+    @if (Model.Any())
+    {
+        <div class="row">
+            @foreach (var ad in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">@ad.IdGameNavigation.Name</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Автор: @ad.IdUserNavigation.Username
+                            </h6>
+                            <p class="card-text">@ad.Discription</p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    Дата создания: @ad.DateCreate?.ToString("dd.MM.yyyy")
+                                </small>
+                            </p>
+
+                            @if (ad.IdSecondUser == null)
+                            {
+                                <form asp-action="RespondToAd" method="post">
+                                    <input type="hidden" name="idUser" value="@ad.IdUser" />
+                                    <input type="hidden" name="idGame" value="@ad.IdGame" />
+                                    <button type="submit" class="btn btn-primary">Откликнуться</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <div class="alert alert-info">
+                                    На это объявление уже откликнулись
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">Объявлений пока нет</div>
+    }
+</div>

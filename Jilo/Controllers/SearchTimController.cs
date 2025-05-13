@@ -20,10 +20,11 @@ namespace Jilo.Controllers
 
         public IActionResult SearchUser(string push) 
         {
+            var username = User.Identity?.Name;
             var users = _context.Users.AsQueryable();
             if (!string.IsNullOrEmpty(push))
             {
-                users = users.Where(u => u.Username.Contains(push));
+                users = users.Where(u => u.Username.Contains(push)).Where(u => u.Username != username);
             }
             return View(users.ToList());
         }
