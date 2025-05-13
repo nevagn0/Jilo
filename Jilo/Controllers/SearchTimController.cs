@@ -24,13 +24,18 @@ namespace Jilo.Controllers
             var users = _context.Users.AsQueryable();
             if (!string.IsNullOrEmpty(push))
             {
-                users = users.Where(u => u.Username.Contains(push)).Where(u => u.Username != username);
+                users = users.Where(u => u.Username.Contains(push) && u.Username != username);
+            }
+            else
+            {
+                users = users.Where(u => u.Username != username);
             }
             return View(users.ToList());
         }
         [HttpGet]
         public IActionResult UserFind(string name)
         {
+            var username = User.Identity?.Name;
             var user = _context.Users
             .Include(v => v.GamesUsers)
             .ThenInclude(b => b.IdGameNavigation)
@@ -40,7 +45,10 @@ namespace Jilo.Controllers
             {
                 return NotFound();
             }
-
+            if(username == name)
+            {
+                return RedirectToAction("Profile", "ProfileUser");
+            }
             ViewBag.Comments = _context.Comms
             .Where(c => c.Targetuser == user.Id)
             .Include(c => c.IdUserNavigation) 
