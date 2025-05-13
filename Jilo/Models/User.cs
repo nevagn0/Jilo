@@ -29,8 +29,6 @@ public partial class User
 
     public string? Discription { get; set; }
 
-    public virtual ICollection<Advertisement> Advertisements { get; set; } = new List<Advertisement>();
-
     public virtual ICollection<Comm> Comms { get; set; } = new List<Comm>();
 
     public virtual ICollection<GamesUser> GamesUsers { get; set; } = new List<GamesUser>();

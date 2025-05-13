@@ -13,7 +13,5 @@ public partial class Game
 
     public string? Avatar { get; set; }
 
-    public virtual ICollection<AdverstmentCreate> AdverstmentCreates { get; set; } = new List<AdverstmentCreate>();
-
     public virtual ICollection<GamesUser> GamesUsers { get; set; } = new List<GamesUser>();
 }

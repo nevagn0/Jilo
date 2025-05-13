@@ -1,0 +1,24 @@
+﻿@model List<Game>
+@{
+    ViewData["Title"] = "Добавление игры";
+}
+<h2>Создать новое объявление</h2>
+
+<form asp-controller="AddAdversmet" asp-action="CreateVersment" method="post">
+    <div class="form-group">
+        <label>Выберите игру:</label>
+        <select name="selectedGameId" class="form-control" required>
+            @foreach (var game in ViewBag.game)
+            {
+                <option value="@game.Id">@game.Name</option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Описание:</label>
+        <textarea name="discription" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Создать объявление</button>
+</form>

@@ -15,9 +15,7 @@ public partial class JiloContext : DbContext
     {
     }
 
-    public virtual DbSet<AdverstmentCreate> AdverstmentCreates { get; set; }
-
-    public virtual DbSet<Advertisement> Advertisements { get; set; }
+    public virtual DbSet<AdversmetUser> AdversmetUsers { get; set; }
 
     public virtual DbSet<Comm> Comms { get; set; }
 
@@ -33,49 +31,32 @@ public partial class JiloContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<AdverstmentCreate>(entity =>
+        modelBuilder.Entity<AdversmetUser>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("adverstment_create_pk");
+            entity.HasKey(e => new { e.IdUser, e.IdGame });
+            entity.ToTable("adversmet_user");
 
-            entity.ToTable("adverstment_create");
+            entity.HasIndex(e => new { e.IdUser, e.IdGame }, "adversmet_user_unique").IsUnique();
 
-            entity.Property(e => e.Id)
-                .UseIdentityAlwaysColumn()
-                .HasColumnName("id");
-            entity.Property(e => e.IdAdversment).HasColumnName("id_adversment");
-            entity.Property(e => e.IdGame).HasColumnName("id_game");
-
-            entity.HasOne(d => d.IdAdversmentNavigation).WithMany(p => p.AdverstmentCreates)
-                .HasForeignKey(d => d.IdAdversment)
-                .HasConstraintName("adverstment_create_advertisement_fk");
-
-            entity.HasOne(d => d.IdGameNavigation).WithMany(p => p.AdverstmentCreates)
-                .HasForeignKey(d => d.IdGame)
-                .HasConstraintName("adverstment_create_games_fk");
-        });
-
-        modelBuilder.Entity<Advertisement>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("advertisement_pk");
-
-            entity.ToTable("advertisement");
-
-            entity.Property(e => e.Id)
-                .UseIdentityAlwaysColumn()
-                .HasColumnName("id");
             entity.Property(e => e.DateCreate)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("date_create");
             entity.Property(e => e.Discription)
                 .HasColumnType("character varying")
                 .HasColumnName("discription");
-            entity.Property(e => e.Games).HasColumnName("games");
-            entity.Property(e => e.IdTim).HasColumnName("id_tim");
+            entity.Property(e => e.IdGame).HasColumnName("id_game");
+            entity.Property(e => e.IdSecondUser).HasColumnName("id_second_user");
             entity.Property(e => e.IdUser).HasColumnName("id_user");
 
-            entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Advertisements)
+            entity.HasOne(d => d.IdGameNavigation).WithMany()
+                .HasForeignKey(d => d.IdGame)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("adversmet_user_games_fk");
+
+            entity.HasOne(d => d.IdUserNavigation).WithMany()
                 .HasForeignKey(d => d.IdUser)
-                .HasConstraintName("advertisement_user_fk");
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("adversmet_user_user_fk");
         });
 
         modelBuilder.Entity<Comm>(entity =>

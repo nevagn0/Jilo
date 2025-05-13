@@ -22,7 +22,7 @@ namespace Jilo.Controllers
                 Console.WriteLine($"Game ID: {game.Id}, Name: {game.Name}");
             }
             return View(games);
-        }
+        }   
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddGame(int gameId, string? rank, string? role)
