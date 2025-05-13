@@ -60,8 +60,11 @@ wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\uploads\085db39af6bdf1f0d607584bd8f105d3.jpg
 wwwroot\uploads\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg
+wwwroot\uploads\60b02ed3-f229-4f3a-98a6-6543eb634ba9_deepseek_mermaid_20250505_58e1c2.png
 wwwroot\uploads\71279ba0-4958-40a6-bf31-8bebfeece044_scale_1200.png
+wwwroot\uploads\841cb1d4-e34f-49c9-99b4-7a29e1fbe6ba_deepseek_mermaid_20250505_58e1c2.png
 wwwroot\uploads\b38b9813-7391-4595-a193-6948c5040ea5_085db39af6bdf1f0d607584bd8f105d3.jpg
+wwwroot\uploads\colda.jpg
 wwwroot\uploads\cs2.png
 wwwroot\uploads\dota2.jpg
 wwwroot\uploads\foto.jpg

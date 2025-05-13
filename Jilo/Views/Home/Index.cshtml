@@ -1,12 +1,100 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<div class="home-page">
+    <div class="home-content">
+        <h1 class="home-title">Добро пожаловать в Jilo</h1>
+        <p class="home-subtitle">
+            Найди своего идеального тимейта для совместных игр. Общайся, создавай объявления и находи единомышленников.
+        </p>
 
-<form>
-<div class="text-center">
-    <button asp-action="Index" asp-controller="Registration">регистрация</button>
-</div>
-    <div class="text-center">
-        <button asp-action="Index" asp-controller="Authorization">Вход</button>
+        <div class="d-flex flex-wrap justify-content-center">
+            <a asp-action="Index" asp-controller="Registration" class="btn btn-light btn-home">Регистрация</a>
+            <a asp-action="Index" asp-controller="Authorization" class="btn btn-primary btn-home">Вход</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Найди команду</h3>
+                <p class="feature-text">
+                    Подбери игроков с подходящим рангом и ролью для своих любимых игр
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="feature-title">Создавай объявления</h3>
+                <p class="feature-text">
+                    Расскажи, кого ты ищешь, и получай отклики от других игроков
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="feature-title">Повышай уровень</h3>
+                <p class="feature-text">
+                    Играй с опытными партнерами и улучшай свои навыки
+                </p>
+            </div>
+        </div>
+
+        <div class="how-it-works">
+            <h2 class="section-title">Как это работает?</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Зарегистрируйся</h3>
+                    <p class="step-text">
+                        Создай аккаунт и добавь свои игры с указанием ранга и роли
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Найди игроков</h3>
+                    <p class="step-text">
+                        Ищи других пользователей или размещай объявления
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Играй вместе</h3>
+                    <p class="step-text">
+                        Общайся с командой и наслаждайся игрой
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; animation: fadeIn 2s ease-out;">
+            <h2 class="section-title">Популярные игры на платформе</h2>
+            <div class="d-flex justify-content-center flex-wrap">
+                <div style="margin: 10px; padding: 15px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <i class="fas fa-gamepad" style="color: var(--pink-primary); font-size: 2rem;"></i>
+                    <p style="margin-top: 10px;">Dota 2</p>
+                </div>
+                <div style="margin: 10px; padding: 15px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <i class="fas fa-gamepad" style="color: var(--pink-primary); font-size: 2rem;"></i>
+                    <p style="margin-top: 10px;">CS:GO</p>
+                </div>
+                <div style="margin: 10px; padding: 15px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <i class="fas fa-gamepad" style="color: var(--pink-primary); font-size: 2rem;"></i>
+                    <p style="margin-top: 10px;">Valorant</p>
+                </div>
+                <div style="margin: 10px; padding: 15px; background: white; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                    <i class="fas fa-gamepad" style="color: var(--pink-primary); font-size: 2rem;"></i>
+                    <p style="margin-top: 10px;">League of Legends</p>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
+</div>
+
+<!-- Подключение Font Awesome для иконок -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
