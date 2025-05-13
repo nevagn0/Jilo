@@ -20,7 +20,7 @@ namespace Jilo.Controllers
         {
             return View();
         }
-        public async Task<IActionResult> Profile()
+        public async Task<IActionResult> Profile(int id)
         {
             var username = User.Identity?.Name;
             if (username == null)
@@ -48,9 +48,9 @@ namespace Jilo.Controllers
 
             var SocialCredits = await _context.Comms.Where(t => t.Targetuser == userr.Id).AverageAsync(t => t.Grade);
             ViewBag.SocialCredits = SocialCredits;
+
             return View(userr);
 
-            
         }
     }
 }

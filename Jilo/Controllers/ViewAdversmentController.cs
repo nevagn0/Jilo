@@ -52,5 +52,18 @@ namespace Jilo.Controllers
             TempData["Success"] = "Вы успешно откликнулись на объявление";
             return RedirectToAction("Index","MainPage");
         }
+        public async Task<IActionResult> AllUserAdversmet()
+        {
+            var username = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var advers = await _context.AdversmetUsers
+                .Include(v => v.IdUserNavigation)
+                .Include(v => v.IdGameNavigation)
+                .Where(v => v.IdUser == username)
+                .ToListAsync();
+
+            ViewBag.Advers = advers;
+
+            return View(advers);
+        }
     }
 }
