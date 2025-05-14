@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jilo.Controllers
+namespace Jilo.WEB.Controllers.Controllers
 {
     public class ViewAdversmentController : Controller
     {
@@ -52,7 +52,7 @@ namespace Jilo.Controllers
             await _context.SaveChangesAsync();
 
             TempData["Success"] = "Вы успешно откликнулись на объявление";
-            return RedirectToAction("Index","MainPage");
+            return RedirectToAction("Index", "MainPage");
         }
         public async Task<IActionResult> AllUserAdversmet()
         {

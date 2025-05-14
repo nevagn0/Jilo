@@ -11,7 +11,7 @@ namespace Jilo.Controllers
     public class ProfileUserController : Controller
     {
         private JiloContext _context;
-        
+
         public ProfileUserController(JiloContext context)
         {
             _context = context;

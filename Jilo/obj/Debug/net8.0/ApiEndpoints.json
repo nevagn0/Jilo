@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ContainingType": "AddGamesApiController",
+    "Method": "AddGameToUser",
+    "RelativePath": "api/games/add-to-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Jilo.Dto.AddGameToUserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

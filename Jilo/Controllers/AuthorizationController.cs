@@ -9,12 +9,12 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Jilo.Controllers
 {
-    
+
     public class AuthorizationController : Controller
-    { 
+    {
         private readonly JiloContext _context;
         private readonly IConfiguration _config;
-        public AuthorizationController(JiloContext context,IConfiguration conf)
+        public AuthorizationController(JiloContext context, IConfiguration conf)
         {
             _context = context;
             _config = conf;
@@ -33,11 +33,11 @@ namespace Jilo.Controllers
             if (!IsValid || us == null)
             {
                 ModelState.AddModelError(string.Empty, "Пользователь не найден");
-                return View("Index",user);
+                return View("Index", user);
             }
 
             var token = GenerateJWT(us);
-            Console.WriteLine($"Generated token: {token}"); 
+            Console.WriteLine($"Generated token: {token}");
 
             Response.Cookies.Append("jwt", token, new CookieOptions
             {
@@ -46,8 +46,8 @@ namespace Jilo.Controllers
                 SameSite = SameSiteMode.Strict,
             });
             return RedirectToAction("Index", "MainPage");
-            
-            
+
+
         }
 
         private string GenerateJWT(User user)
@@ -69,6 +69,6 @@ namespace Jilo.Controllers
             );
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-        
+
     }
 }

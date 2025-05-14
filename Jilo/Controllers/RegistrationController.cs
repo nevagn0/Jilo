@@ -1,6 +1,6 @@
-﻿using Jilo.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using BCrypt.Net;
+using Jilo.Models;
 namespace Jilo.Controllers
 {
     public class RegistrationController : Controller
@@ -17,26 +17,26 @@ namespace Jilo.Controllers
         [HttpPost]
         public async Task<IActionResult> Index(User user, IFormFile avatarFile)
         {
-            if (user.Username == null || user.Username.Length > 30) 
+            if (user.Username == null || user.Username.Length > 30)
             {
                 ModelState.AddModelError("Username", "Никнейм не может быть больше 30 или быть пустым");
-                return View("Index",user);
+                return View("Index", user);
             }
-            if(user.Email == null)
+            if (user.Email == null)
             {
                 ModelState.AddModelError("Email", "Email не может быть пустым");
                 return View("Index", user);
             }
-            if (user.Passwordhash == null || user.Passwordhash.Length < 8) 
+            if (user.Passwordhash == null || user.Passwordhash.Length < 8)
             {
                 ModelState.AddModelError("Passwordhash", "пароль не может быть ментше 8");
                 return View("Index", user);
             }
-            if (avatarFile != null && avatarFile.Length > 0) 
+            if (avatarFile != null && avatarFile.Length > 0)
             {
                 string UploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "uploads");
                 string UniqueFile = Guid.NewGuid().ToString() + '_' + avatarFile.FileName;
-                string filePath = Path.Combine(UploadFolder,UniqueFile);
+                string filePath = Path.Combine(UploadFolder, UniqueFile);
 
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
@@ -54,7 +54,7 @@ namespace Jilo.Controllers
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

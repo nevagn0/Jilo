@@ -24,7 +24,7 @@ namespace Jilo.Controllers
             }
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Username == username);
             user.LastOnline = DateTime.Now;
-             _context.SaveChanges();
+            _context.SaveChanges();
 
             if (user == null)
             {

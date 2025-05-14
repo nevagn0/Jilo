@@ -1,91 +1,53 @@
-﻿using Jilo.Models;
+﻿using System.Net.Http.Headers;
+using Jilo.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
-namespace Jilo.Controllers
+[Authorize]
+[Route("AddGames")]
+public class AddGamesController : Controller
 {
-    [Authorize]
-    public class AddGamesController : Controller
+
+    private readonly IHttpClientFactory _httpClientFactory;
+    private readonly JiloContext _context;
+
+    public AddGamesController(IHttpClientFactory httpClientFactory,JiloContext context)
     {
-        private readonly JiloContext _context;
+        _httpClientFactory = httpClientFactory;
+        _context = context;
+    }
+    [HttpGet("AddGame")]
+    public IActionResult AddGame()
+    {
+        var games = _context.Games.ToList();
+        return View(games);
+    }
 
-        public AddGamesController(JiloContext context)
+    [HttpPost("AddGame")]
+    public async Task<IActionResult> AddGame(int gameId, string? rank, string? role, string timeInGame)
+    {
+        var token = HttpContext.Request.Cookies["jwt"];
+        if (string.IsNullOrEmpty(token))
         {
-            _context = context;
-        }
-        public IActionResult Index()
-        {
-            var games = _context.Games.ToList();
-            foreach (var game in games)
-            {
-                Console.WriteLine($"Game ID: {game.Id}, Name: {game.Name}");
-            }
-            return View(games);
-        }   
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddGame(int gameId, string? rank, string? role, string TimeInGame)
-        {
-            try
-            {
-                if (!User.Identity.IsAuthenticated)
-                {
-                    Console.WriteLine("Пользователь не аутентифицирован");
-                    return RedirectToAction("Index", "Authorization");
-                }
-
-                Console.WriteLine($"Получен gameId: {gameId}");
-
-                var game = await _context.Games.FindAsync(gameId);
-                if (game == null)
-                {
-                    Console.WriteLine($"Игра с ID {gameId} не найдена в БД");
-                    TempData["Error"] = "Игра не найдена";
-                    return RedirectToAction("Index");
-                }
-
-                var username = User.Identity.Name;
-                var user = await _context.Users
-                    .FirstOrDefaultAsync(u => u.Username == username);
-
-                if (user == null)
-                {
-                    Console.WriteLine($"Пользователь {username} не найден");
-                    return RedirectToAction("Index", "Authorization");
-                }
-
-                
-
-                if (await _context.GamesUsers.AnyAsync(gu => gu.IdUser == user.Id && gu.IdGame == gameId))
-                {
-                    TempData["Message"] = "Игра уже добавлена";
-                    return RedirectToAction("Index");
-                }
-
-
-                var gameUser = new GamesUser
-                {
-                    IdUser = user.Id,
-                    IdGame = gameId,
-                    Rank = rank ?? "Не указано",
-                    TimeInGame = TimeInGame,
-                    Role = role ?? "Игрок"
-                };
-
-                await _context.GamesUsers.AddAsync(gameUser);
-                await _context.SaveChangesAsync();
-
-                TempData["Success"] = "Игра успешно добавлена";
-                return RedirectToAction("Index", "MainPage");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка: {ex.Message}");
-                TempData["Error"] = "Произошла ошибка";
-                return RedirectToAction("Index");
-            }
+            return RedirectToAction("AddGame");
         }
 
+        var client = _httpClientFactory.CreateClient("ApiClient");
+        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        var response = await client.PostAsJsonAsync("api/games/add-to-user", new
+        {
+            GameId = gameId,
+            Rank = rank,
+            Role = role,
+            TimeInGame = timeInGame
+        });
+
+        if (response.IsSuccessStatusCode)
+        {
+            return RedirectToAction("Index", "MainPage");
+        }
+
+        TempData["Error"] = await response.Content.ReadAsStringAsync();
+        return RedirectToAction("AddGame");
     }
 }

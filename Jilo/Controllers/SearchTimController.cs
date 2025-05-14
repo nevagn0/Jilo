@@ -1,4 +1,5 @@
-﻿using Jilo.Models;
+﻿
+using Jilo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,7 @@ namespace Jilo.Controllers
 {
     public class SearchTimController : Controller
     {
-        private readonly JiloContext  _context;
+        private readonly JiloContext _context;
         public SearchTimController(JiloContext context)
         {
             _context = context;
@@ -18,7 +19,7 @@ namespace Jilo.Controllers
             return View();
         }
 
-        public IActionResult SearchUser(string push) 
+        public IActionResult SearchUser(string push)
         {
             var username = User.Identity?.Name;
             var users = _context.Users.AsQueryable();
@@ -39,19 +40,19 @@ namespace Jilo.Controllers
             var user = _context.Users
             .Include(v => v.GamesUsers)
             .ThenInclude(b => b.IdGameNavigation)
-            .Include(u => u.Comms) 
+            .Include(u => u.Comms)
             .FirstOrDefault(n => n.Username == name);
             if (user == null)
             {
                 return NotFound();
             }
-            if(username == name)
+            if (username == name)
             {
                 return RedirectToAction("Profile", "ProfileUser");
             }
             ViewBag.Comments = _context.Comms
             .Where(c => c.Targetuser == user.Id)
-            .Include(c => c.IdUserNavigation) 
+            .Include(c => c.IdUserNavigation)
             .ToList();
             return View(user);
         }
