@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Jilo.Controllers
+namespace Jilo.Controllers.Web
 {
 
     public class AuthorizationController : Controller

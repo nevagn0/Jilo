@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 
-namespace Jilo.Controllers
+namespace Jilo.Controllers.Web
 {
     [Authorize]
     public class ProfileUserController : Controller

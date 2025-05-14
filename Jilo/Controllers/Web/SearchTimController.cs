@@ -1,10 +1,9 @@
-﻿
-using Jilo.Models;
+﻿using Jilo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jilo.Controllers
+namespace Jilo.Controllers.Web
 {
     public class SearchTimController : Controller
     {

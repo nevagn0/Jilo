@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+/// <summary>
+/// Добавляет игру пользователю
+/// </summary>
 [Authorize]
 [ApiController]
 [Route("api/games")]

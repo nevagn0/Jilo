@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jilo.WEB.Controllers.Controllers
+namespace Jilo.Controllers.Web
 {
     public class ViewAdversmentController : Controller
     {

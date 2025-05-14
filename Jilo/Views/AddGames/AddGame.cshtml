@@ -5,7 +5,7 @@
 <div class="container">
     <h2 class="my-4">Выберите свои игры</h2>
     <div>
-        <button asp-controller="Back" asp-action="AddGames">Назад</button>
+        <button onclick="window.history.back()">Назад</button>
     </div>
     <div class="row">
         @foreach (var game in Model)

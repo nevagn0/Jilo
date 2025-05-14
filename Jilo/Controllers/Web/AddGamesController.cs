@@ -20,7 +20,7 @@ public class AddGamesController : Controller
     {
         var games = _context.Games.ToList();
         return View(games);
-    }
+    } 
 
     [HttpPost("AddGame")]
     public async Task<IActionResult> AddGame(int gameId, string? rank, string? role, string timeInGame)

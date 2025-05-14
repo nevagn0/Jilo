@@ -2,7 +2,7 @@ using System.Diagnostics;
 using Jilo.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Jilo.Controllers
+namespace Jilo.Controllers.Web
 {
     public class HomeController : Controller
     {

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration.UserSecrets;
 
-namespace Jilo.Controllers
+namespace Jilo.Controllers.Web
 {
     [Authorize]
     public class MainPageController : Controller
