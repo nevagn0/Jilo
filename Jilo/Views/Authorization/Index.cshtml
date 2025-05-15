@@ -1,4 +1,4 @@
-﻿@model User
+﻿@model LoginDto
 @{
     ViewData["Title"] = "Authorization";
 }
@@ -11,10 +11,10 @@
         <input asp-for="Username" placeholder="Введите ваш никнем" />
         <span asp-validation-for="Username"></span>
     </div>
-    <div>
-        <label asp-for="Passwordhash"></label>
-        <input asp-for="Passwordhash" placeholder="Введите пароль" />
-        <span asp-validation-for="Passwordhash"></span>
+    <div>z`
+        <label asp-for="Password"></label>
+        <input asp-for="Password" placeholder="Введите пароль" />
+        <span asp-validation-for="Password"></span>
     </div>
     <div>
         <button asp-action="Authorization" asp-controller="Authorization" type="submit">Вход</button>

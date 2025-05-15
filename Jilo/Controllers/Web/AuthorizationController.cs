@@ -21,43 +21,47 @@ namespace Jilo.Controllers.Web
         }
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
         [HttpPost]
-        public async Task<IActionResult> Authorization(User user)
+        public async Task<IActionResult> Authorization(LoginDto loginDto)
         {
-            var us = await _context.Users.FirstOrDefaultAsync(f => f.Username == user.Username);
-
-            bool IsValid = BCrypt.Net.BCrypt.Verify(user.Passwordhash, us.Passwordhash);
-
-            if (!IsValid || us == null)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError(string.Empty, "Пользователь не найден");
-                return View("Index", user);
+                return View(loginDto);
             }
 
-            var token = GenerateJWT(us);
-            Console.WriteLine($"Generated token: {token}");
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == loginDto.Username);
+
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Passwordhash))
+            {
+                ModelState.AddModelError(string.Empty, "Неверный логин или пароль");
+                return View(loginDto);
+            }
+
+            var token = GenerateJwtToken(user);
 
             Response.Cookies.Append("jwt", token, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true,
+                Secure = Request.IsHttps,
                 SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(1)
             });
+
             return RedirectToAction("Index", "MainPage");
-
-
         }
-
-        private string GenerateJWT(User user)
+        private string GenerateJwtToken(User user)
         {
-            var SecKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
-            var Credentional = new SigningCredentials(SecKey, SecurityAlgorithms.HmacSha256);
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
             var claims = new[]
             {
                 new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Role, user.Role ?? "User")
             };
 
             var token = new JwtSecurityToken(
@@ -65,10 +69,15 @@ namespace Jilo.Controllers.Web
                 audience: _config["Jwt:Audience"],
                 claims: claims,
                 expires: DateTime.UtcNow.AddHours(1),
-                signingCredentials: Credentional
+                signingCredentials: credentials
             );
+
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
     }
+}
+public class LoginDto
+{
+    public string Username { get; set; }
+    public string Password { get; set; }
 }

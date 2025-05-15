@@ -14,6 +14,7 @@ namespace Jilo.Controllers.Web
             _context = context;
             _httpClientFactory = httpClientFactory;
         }
+        [HttpGet]
         public IActionResult Index()
         {
             return View("Index");

@@ -41,6 +41,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Jilo.Controllers.Api.AuthorizationApiController",
+    "Method": "Index",
+    "RelativePath": "api/authorization/autorization-user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authorization",
+        "Type": "Jilo.Dto.Authorization",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AddGamesApiController",
     "Method": "AddGameToUser",
     "RelativePath": "api/games/add-to-user",
@@ -91,7 +107,7 @@
     "ContainingType": "Jilo.Controllers.Web.RegistrationController",
     "Method": "Index",
     "RelativePath": "Registration",
-    "HttpMethod": "",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
