@@ -104,6 +104,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Jilo.Controllers.Api.UpdateApiController",
+    "Method": "UpdateGame",
+    "RelativePath": "api/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idGame",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "dto",
+        "Type": "Jilo.Dto.GamesUserUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Api.UpdateApiController",
+    "Method": "Delete",
+    "RelativePath": "api/Update",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idGame",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Jilo.Controllers.Web.RegistrationController",
     "Method": "Index",
     "RelativePath": "Registration",
@@ -139,6 +186,73 @@
       {
         "Name": "AvatarFile",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Web.UpdateOrDeleteController",
+    "Method": "UpOrDel",
+    "RelativePath": "UpdateOrDelete",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Web.UpdateOrDeleteController",
+    "Method": "Delete",
+    "RelativePath": "UpdateOrDelete/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idGame",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Web.UpdateOrDeleteController",
+    "Method": "Update",
+    "RelativePath": "UpdateOrDelete/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idGame",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rank",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TimeInGame",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

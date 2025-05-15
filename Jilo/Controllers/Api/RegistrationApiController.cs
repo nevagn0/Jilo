@@ -58,6 +58,7 @@ namespace Jilo.Controllers.Api
                 Passwordhash = BCrypt.Net.BCrypt.HashPassword(registration.Password),
                 Socialcredits = 0,
                 Avatar = Avatar,
+                DataRegistration = DateOnly.FromDateTime(DateTime.Now),
                 LastOnline = DateTime.Now,
                 Role = "User"
             };
