@@ -3,7 +3,9 @@
     ViewData["Title"] = "Добавление игры";
 }
 <h2>Создать новое объявление</h2>
-
+<form>
+    <button asp-controller="Back" asp-action="AddGames">Назад</button>
+</form>
 <form asp-controller="AddAdversmet" asp-action="CreateVersment" method="post">
     <div class="form-group">
         <label>Выберите игру:</label>

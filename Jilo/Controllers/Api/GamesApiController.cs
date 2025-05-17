@@ -21,7 +21,7 @@ public class AddGamesApiController : ControllerBase
 
     [Authorize]
     [HttpPost("add-to-user")]
-    public async Task<IActionResult> AddGameToUser( [FromBody] AddGameToUserRequest request, [FromServices] ILogger<AddGamesApiController> logger)
+    public async Task<IActionResult> AddGameToUser([FromBody] AddGameToUserRequest request, [FromServices] ILogger<AddGamesApiController> logger)
     {
         try
         {

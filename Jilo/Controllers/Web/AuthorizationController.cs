@@ -1,4 +1,5 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using System.ComponentModel.DataAnnotations;
+using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
 using System.Text;
@@ -28,16 +29,22 @@ namespace Jilo.Controllers.Web
         {
             if (!ModelState.IsValid)
             {
-                return View(loginDto);
+                return View("Index",loginDto);
             }
 
             var user = await _context.Users
                 .FirstOrDefaultAsync(u => u.Username == loginDto.Username);
 
-            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Passwordhash))
+            if (!BCrypt.Net.BCrypt.Verify(loginDto.Password, user.Passwordhash))
             {
-                ModelState.AddModelError(string.Empty, "Неверный логин или пароль");
-                return View(loginDto);
+                ModelState.AddModelError(nameof(LoginDto.Password), "Неверный пароль");
+                return View("Index", loginDto);
+            }
+
+            if (user == null)
+            {
+                ModelState.AddModelError(nameof(LoginDto.Username), "Пользователь с таким именем не найден");
+                return View("Index", loginDto);
             }
 
             var token = GenerateJwtToken(user);
@@ -46,10 +53,11 @@ namespace Jilo.Controllers.Web
             {
                 HttpOnly = true,
                 Secure = Request.IsHttps,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddHours(1)
+                SameSite = SameSiteMode.Lax, 
+                Expires = DateTime.UtcNow.AddHours(1),
+                IsEssential = true
             });
-
+            Console.WriteLine($"JWT токен: {token}");
             return RedirectToAction("Index", "MainPage");
         }
         private string GenerateJwtToken(User user)
@@ -78,6 +86,8 @@ namespace Jilo.Controllers.Web
 }
 public class LoginDto
 {
+    [Required(ErrorMessage = "Имя пользователя обязательно")]
     public string Username { get; set; }
+    [Required(ErrorMessage = "Пароль обязателен")]
     public string Password { get; set; }
 }

@@ -46,3 +46,15 @@
             <button type="submit">Отправить</button>
         </form>
     </div>
+
+<script>
+    document.getElementById('commentForm')?.addEventListener('submit', function(e) {
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <text>
+                e.preventDefault();
+                window.location.href = '@Url.Action("Index", "Registration")?returnUrl=' +
+                    encodeURIComponent('@Url.Action("UserFind", new { name = Model.Username })');
+        </text>
+    }
+    });

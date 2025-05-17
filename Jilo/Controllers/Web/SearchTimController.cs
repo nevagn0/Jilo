@@ -58,6 +58,14 @@ namespace Jilo.Controllers.Web
         [HttpPost]
         public async Task<IActionResult> AddComm(string comm, double grade, int targetUser)
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                var targetUserr = await _context.Users.FindAsync(targetUser);
+                return RedirectToAction("Index", "Home", new
+                {
+                    returnUrl = $"/UserFind?name={Uri.EscapeDataString(targetUserr.Username)}"
+                });
+            }
             var username = User.Identity?.Name;
             if (username == null)
             {

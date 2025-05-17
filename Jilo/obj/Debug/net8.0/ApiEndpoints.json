@@ -151,6 +151,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Jilo.Controllers.Api.UpdateApiController",
+    "Method": "UpOrDel",
+    "RelativePath": "api/Update/Goida",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Jilo.Controllers.Web.RegistrationController",
     "Method": "Index",
     "RelativePath": "Registration",
@@ -186,6 +196,43 @@
       {
         "Name": "AvatarFile",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Web.RegistrationController",
+    "Method": "VerifyEmail",
+    "RelativePath": "Registration/verify-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Web.RegistrationController",
+    "Method": "VerifyUsername",
+    "RelativePath": "Registration/verify-username",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],

@@ -3,6 +3,9 @@
 	ViewData["Title"] = "Search";
 }
 <form asp-controller="SearchTim" asp-action="SearchUser" method="get">
+    <div>
+        <button asp-controller="Back" asp-action="AddGames">Назад</button>
+    </div>
     <div class="search-box">
         <input type="text" name="name" placeholder="Введите имя">
         <button type="submit" asp-controller="SearchTim" asp-action="UserFind">Поиск</button>

@@ -19,8 +19,26 @@ namespace Jilo.Controllers.Web
         {
             return View("Index");
         }
+        [HttpGet("verify-username")]
+        public IActionResult VerifyUsername(string username)
+        {
+            if (_context.Users.Any(u => u.Username == username))
+            {
+                return Json($"Имя пользователя {username} уже занято");
+            }
+            return Json(true);
+        }
+        [HttpGet("verify-email")]
+        public IActionResult VerifyEmail(string email)
+        {
+            if (_context.Users.Any(u => u.Email == email))
+            {
+                return Json($"Email {email} уже зарегистрирован");
+            }
+            return Json(true);
+        }
         [HttpPost]
-        public async Task<IActionResult> Index(RegisterViewModel model)
+        public async Task<IActionResult> Index(RegisterViewModel model, string returnUrl = null)
         {
             if (!ModelState.IsValid)
             {
@@ -50,6 +68,10 @@ namespace Jilo.Controllers.Web
                     return View(model);
                 }
 
+                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                {
+                    return LocalRedirect(returnUrl); 
+                }
                 return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
@@ -62,10 +84,14 @@ namespace Jilo.Controllers.Web
 }
 public class RegisterViewModel
 {
+    [Remote(action: "VerifyUsername", controller: "Registration", AdditionalFields = "__RequestVerificationToken", ErrorMessage = "Это имя уже занято")]
     public string Username { get; set; }
 
+    [Remote(action: "VerifyEmail", controller: "Registration", AdditionalFields = "__RequestVerificationToken", ErrorMessage = "Этот email уже зарегистрирован")]
     public string Email { get; set; }
 
+    [Required(ErrorMessage = "Пароль обязателен")]
+    [StringLength(100, MinimumLength = 8, ErrorMessage = "Пароль должен быть не менее 8 символов")]
     public string Password { get; set; }
 
     public IFormFile? AvatarFile { get; set; }

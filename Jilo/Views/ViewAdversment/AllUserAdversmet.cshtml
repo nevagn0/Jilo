@@ -4,6 +4,9 @@
 	ViewData["Title"] = "Мои объявления";
 }
 <form asp-action="AllUserAdversmet">
+    <div>
+        <button asp-controller="Back" asp-action="Profile">Назад</button>
+    </div>
     @if (Model.Any())
     {
         <div class="row">

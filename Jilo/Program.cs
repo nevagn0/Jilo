@@ -5,11 +5,11 @@ using System.Text;
 using Jilo.Models;
 using System.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authorization;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddDbContext<JiloContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -35,6 +35,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 return Task.CompletedTask;
             }
         };
+
     });
 
 builder.Services.AddSwaggerGen(c =>
@@ -73,14 +74,26 @@ builder.Services.AddSwaggerGen(c =>
 
 builder.Services.AddHttpClient("ApiClient", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7136/"); // Базовый адрес вашего API
+    client.BaseAddress = new Uri("https://localhost:7136/");
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 });
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-
+app.Use(async (context, next) =>
+{
+    var endpoint = context.GetEndpoint();
+    if (endpoint?.Metadata?.GetMetadata<AuthorizeAttribute>() != null)
+    {
+        if (!context.User.Identity.IsAuthenticated)
+        {
+            context.Response.Redirect("/Authorization/Index");
+            return;
+        }
+    }
+    await next();
+});
 
 if (app.Environment.IsDevelopment())
 {
@@ -88,7 +101,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Jilo API v1");
-        // Для авторизации в Swagger UI
         c.OAuthClientId("swagger-ui");
         c.OAuthAppName("Swagger UI");
     });
@@ -131,6 +143,7 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine("Игры уже есть в БД, пропускаем инициализацию.");
     }
 }
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -138,4 +151,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Jilo API V1");
+});
 app.Run();

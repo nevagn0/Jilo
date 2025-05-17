@@ -31,7 +31,10 @@ namespace Jilo.Controllers.Web
         {
             return RedirectToAction("Index", "MainPage");
         }
-
+        public IActionResult Profile()
+        {
+            return RedirectToAction("Profile", "ProfileUser");
+        }
         public IActionResult Exit()
         {
             var token = Request.Cookies["jwt"];

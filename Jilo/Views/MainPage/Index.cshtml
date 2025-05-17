@@ -1,27 +1,117 @@
 ﻿@model User
 @{
-	ViewData["Title"] = "MainPage";
+    ViewData["Title"] = "MainPage";
 }
-<form asp-action="Index">
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="~/css/site.css" />
 
-		<button class="avatar" asp-controller="ProfileUser" asp-action="Profile">
-		<img src="@Model.Avatar" alt="Аватарка" style="width: 100px; height: 100px; border-radius: 50%;" />
-		</button>
-		<div>
-			<button asp-controller="Back" asp-action="Exit">Выход</button>
-		</div>
-		<div>
-			<button asp-controller="AddGames" asp-action="AddGame">добавить игру</button>
-		</div>
-		<div>
-			<button asp-controller="SearchTim" asp-action="SearchUser">найти союзника</button>
-		</div>
-		<div>
-		<button asp-controller="AddAdversmet" asp-action="Create">Создать объявление</button>
-		</div>
-		<div>
-		<button asp-controller="ViewAdversment" asp-action="ViewAdverstment">Просмотреть все объявления</button>
-		</div>
-</form>
+<div class="main-page">
+    <div class="main-container">
+        <!-- Шапка с аватаркой справа -->
+        <div class="main-header">
+            <form asp-controller="Back" asp-action="Exit" method="post">
+                <button type="submit" class="action-button">
+                    <i class="fas fa-sign-out-alt"></i> Выход
+                </button>
+            </form>
+
+            <a asp-controller="ProfileUser" asp-action="Profile" class="user-profile">
+                <img src="@Model.Avatar" class="user-avatar" alt="Аватар" />
+            </a>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="dashboard-grid">
+            <a asp-controller="AddGames" asp-action="AddGame" class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3 class="card-title">Добавить игру</h3>
+                <p class="card-description">Расширьте свою коллекцию</p>
+            </a>
+
+            <a asp-controller="SearchTim" asp-action="SearchUser" class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="card-title">Найти союзника</h3>
+                <p class="card-description">Создайте идеальную команду</p>
+            </a>
+
+            <a asp-controller="AddAdversmet" asp-action="Create" class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="card-title">Создать объявление</h3>
+                <p class="card-description">Расскажите о своих потребностях</p>
+            </a>
+
+            <a asp-controller="ViewAdversment" asp-action="ViewAdverstment" class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-list-alt"></i>
+                </div>
+                <h3 class="card-title">Все объявления</h3>
+                <p class="card-description">Просмотрите доступные предложения</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Подключение иконок -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<canvas id="particles" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
+<script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const colors = ['#6c5ce7', '#a29bfe', '#fd79a8', '#2d3436'];
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 2 + 1;
+            this.color = colors[Math.floor(Math.random() * colors.length)];
+            this.speedX = Math.random() * 2 - 1;
+            this.speedY = Math.random() * 2 - 1;
+        }
+
+        update() {
+            if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            this.x += this.speedX;
+            this.y += this.speedY;
+        }
+
+        draw() {
+            ctx.fillStyle = this.color;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    function init() {
+        for (let i = 0; i < 20; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+        requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>

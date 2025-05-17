@@ -2,10 +2,12 @@
 @{
     ViewData["Title"] = "Все объявления";
 }
-
+<form asp-action="Index">
 <div class="container">
     <h1>Список объявлений</h1>
-
+    <div>
+        <button asp-controller="Back" asp-action="AddGames">Назад</button>
+    </div>
     @if (Model.Any())
     {
         <div class="row">
@@ -49,4 +51,6 @@
     {
         <div class="alert alert-info">Объявлений пока нет</div>
     }
+
 </div>
+</form>

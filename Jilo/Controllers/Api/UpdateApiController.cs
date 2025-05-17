@@ -2,6 +2,7 @@
 using Jilo.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace Jilo.Controllers.Api
 {
@@ -15,9 +16,20 @@ namespace Jilo.Controllers.Api
         {
             _context = context;
         }
+        [HttpGet("Goida")]
+        public IActionResult UpOrDel()
+        {
+            var UserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (UserId == null)
+            {
+                return Unauthorized();
+            }
+            var games = _context.GamesUsers.Where(v => v.IdUser == int.Parse(UserId)).Include(v => v.IdGameNavigation).ToList();
+            return Ok(games);
+        }
+
         [HttpPut]
-        public async Task<IActionResult> UpdateGame([FromQuery] int idUser, [FromQuery] int idGame,
-                                          [FromBody] GamesUserUpdateDto dto)
+        public async Task<IActionResult> UpdateGame([FromQuery] int idUser, [FromQuery] int idGame, [FromBody] GamesUserUpdateDto dto)
         {
             var game = await _context.GamesUsers
                 .FirstOrDefaultAsync(g => g.IdUser == idUser && g.IdGame == idGame);
