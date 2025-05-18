@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Jilo.Controllers.Web
+namespace Jilo.Controllers
 {
     public class ViewAdversmentController : Controller
     {
@@ -66,6 +66,17 @@ namespace Jilo.Controllers.Web
             ViewBag.Advers = advers;
 
             return View(advers);
+        }
+        public async Task<IActionResult> SecondUserProfileOpen(string username)
+        {
+            Console.WriteLine($"Запрошен профиль пользователя: {username}");
+            var userExists = await _context.Users.AnyAsync(v => v.Username == username);
+            if (!userExists)
+            {
+                return NotFound();
+            }
+
+            return RedirectToAction("UserFind", "SearchTim", new { name = username });
         }
     }
 }

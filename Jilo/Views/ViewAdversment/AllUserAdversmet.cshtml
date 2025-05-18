@@ -3,7 +3,7 @@
 @{
 	ViewData["Title"] = "Мои объявления";
 }
-<form asp-action="AllUserAdversmet">
+<form asp-action="AllUserAdverstmet">
     <div>
         <button asp-controller="Back" asp-action="Profile">Назад</button>
     </div>
@@ -20,7 +20,12 @@
                                 Автор: @ad.IdUserNavigation.Username
                             </h6>
                             <h6 class="card-subtitle mb-2 text-muted">
-                                Откликнулся: @ad.NameSecondUser
+                                Откликнулся:
+                                <a asp-controller="ViewAdversment"
+                                   asp-action="SecondUserProfileOpen"
+                                   asp-route-username="@ad.NameSecondUser">
+                                    @ad.NameSecondUser
+                                </a>
                             </h6>
                             <p class="card-text"> Описание: @ad.Discription</p>
                             <p class="card-text">
