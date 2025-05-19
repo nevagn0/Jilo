@@ -5,8 +5,8 @@
 
 <div class="addgame-page">
     <div class="addgame-container">
-        <form>
-            <button asp-controller="Back" asp-action="AddGames" class="addgame-back-btn">
+        <form asp-controller="Back" asp-action="AddGames" method="post" class="addgame-back-form">
+            <button type="submit" class="addgame-back-btn">
                 <i class="fas fa-arrow-left"></i> Назад
             </button>
         </form>
@@ -15,6 +15,13 @@
             <h1 class="addgame-title">Выберите свои игры</h1>
             <p class="addgame-subtitle">Добавьте игры, в которые вы играете</p>
         </div>
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="addgame-message @(ViewBag.MessageType == "success" ? "addgame-message-success" : "addgame-message-error")">
+                @ViewBag.Message
+            </div>
+        }
 
         <div class="addgame-grid">
             @foreach (var game in Model)

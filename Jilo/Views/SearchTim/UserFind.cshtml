@@ -5,7 +5,6 @@
 
 <div class="userfind-page">
     <div class="userfind-container">
-        <!-- Кнопка Назад -->
         <button onclick="window.history.back()" type="submit" class="userfind-back-btn">
                 <i class="fas fa-arrow-left"></i> Назад
             </button>
@@ -80,6 +79,9 @@
                     <p class="userfind-no-comments">Пока нет комментариев</p>
                 }
             </div>
+        </div>
+        <div>
+            <p>Cредняя оценка: @(ViewBag.SocialCredits?.ToString("0.00") ?? "нет данных")</p>
         </div>
             <div class="userfind-section">
                 <h2 class="userfind-section-title">Оставить комментарий</h2>

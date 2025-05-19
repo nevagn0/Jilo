@@ -1402,7 +1402,7 @@ form {
     overflow: hidden;
 }
 
-/* ==================== Свои объявления Style ==================== */
+/* ==================== profile Style ==================== */
 
 .adversmet-page {
     background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
@@ -1552,5 +1552,325 @@ form {
 @@media (max-width: 768px) {
     .adversmet-grid {
         grid-template-columns: 1fr;
+    }
+}
+.addgame-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.addgame-message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.addgame-message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.addgame-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.profile-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 2px solid #1c1c1c;
+    position: relative;
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.profile-action-btn {
+    background: none;
+    border: none;
+    color: #2e2e2e;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+    .profile-action-btn:hover {
+        background-color: #f0f0f0;
+        color: #1c1c1c;
+    }
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-username {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #1c1c1c;
+}
+
+.profile-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.profile-meta-item {
+    font-size: 0.9rem;
+    color: #2e2e2e;
+}
+
+.profile-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.profile-section-title {
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+    color: #1c1c1c;
+    display: flex;
+    align-items: center;
+}
+
+.profile-game-count {
+    font-size: 1rem;
+    color: #2e2e2e;
+    margin-left: 0.5rem;
+}
+
+.profile-description-text,
+.profile-no-description {
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.profile-no-description {
+    color: #666;
+    font-style: italic;
+}
+
+.profile-description-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.profile-description-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.profile-description-btn {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-games {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-game-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.profile-game-info {
+    flex-grow: 1;
+}
+
+.profile-game-name {
+    font-size: 1.1rem;
+    margin: 0 0 0.3rem 0;
+    color: #1c1c1c;
+}
+
+.profile-game-details {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-game-detail {
+    font-size: 0.9rem;
+    color: #2e2e2e;
+}
+
+.profile-game-edit-btn {
+    background: none;
+    border: none;
+    color: #1c1c1c;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.profile-no-games {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.profile-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-rating-label {
+    font-weight: 600;
+}
+
+.profile-rating-value {
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+.profile-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile-comment {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.profile-comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-comment-content {
+    flex-grow: 1;
+}
+
+.profile-comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.profile-comment-author {
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+.profile-comment-rating {
+    color: #2e2e2e;
+    font-size: 0.9rem;
+}
+
+.profile-comment-text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.profile-no-comments {
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.profile-advertisements-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+    .profile-advertisements-btn:hover {
+        background-color: #000000;
+    }
+
+@@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-meta {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .profile-game-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .profile-game-edit-btn {
+        align-self: flex-end;
     }
 }

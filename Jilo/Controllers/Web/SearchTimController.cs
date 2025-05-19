@@ -53,6 +53,10 @@ namespace Jilo.Controllers.Web
             .Where(c => c.Targetuser == user.Id)
             .Include(c => c.IdUserNavigation)
             .ToList();
+
+            var SocialCredits = _context.Comms.Where(t => t.Targetuser == user.Id).Average(t => t.Grade);
+            ViewBag.SocialCredits = SocialCredits;
+
             return View(user);
         }
         [HttpPost]

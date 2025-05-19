@@ -1,79 +1,117 @@
 ﻿@model User
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = "Профиль пользователя";
 }
 
-<form asp-action="Index">
-    <div>
-        <button asp-controller="Back" asp-action="AddGames">Назад</button>
-    </div>
-    <div>
-        <button asp-controller="Back" asp-action="Exit">Выход</button>
-    </div>
-<div class="profile-container">
-    <img src="@Model.Avatar" class="avatar" alt="Аватар" style="width: 100px; border-radius: 50%;">
-    <h1>Профиль пользователя @Model.Username</h1>
-    <a>Дата регистраии пользователя: @Model.DataRegistration</a>
-    <div>
-            <a>Последний раз онлайн @Model.LastOnline</a>
-    </div>
-        @if (string.IsNullOrEmpty(Model.Discription))
-        {
-            <p>Описания пока нет :(, Добавьте источники где с вами смогут связаться другие игроки.</p>
-        }
-        else
-        {
-            <p>@Model.Discription</p>
-        }
-    <div>
-            <input type="text" name="discrip" placeholder="Описание" />
-            <button asp-controller="ProfileUser" asp-action="UserDiscription">Сохранить/Редактировать</button>
-    </div>
-    <p>Всего игр: @ViewBag.GameCount</p>
-    
-    @if (ViewBag.AllGames != null && ViewBag.AllGames.Count > 0)
-    {
-        <h3>Список игр:</h3>
-        <ul>
-            @foreach (var gameUser in ViewBag.AllGames)
-            {
-                <li>
-                    @gameUser.IdGameNavigation.Name -
-                    Ранг: @gameUser.Rank,
-                    Роль: @gameUser.Role
-                    <button asp-controller="UpdateOrDelete" asp-action="UpOrDel">Редактировать</button>
-                </li>
-            }
-        </ul>
-    }
-    else
-    {
-        <p>У пользователя пока нет игр</p>
-    }
-    <div>
-        <h2>Комментарии:</h2>
-        @if (ViewBag.Comments != null && ViewBag.Comments.Count > 0)
-        {
-            @foreach (var comm in ViewBag.Comments)
-            {
-                <div class="comment">
-                    <img src="@comm.IdUserNavigation?.Avatar" class="comment-avatar" />
-                    <div>
-                        <p><strong>@comm.IdUserNavigation?.Username:</strong> @comm.Comm1</p>
-                        <p>Оценка: @comm.Grade</p>
-                    </div>
+<div class="profile-page">
+    <div class="profile-container">
+        <div class="profile-actions">
+            <form asp-controller="Back" asp-action="AddGames" method="post" class="profile-back-form">
+                <button type="submit" class="profile-action-btn">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </button>
+            </form>
+            <form asp-controller="Back" asp-action="Exit" method="post" class="profile-exit-form">
+                <button type="submit" class="profile-action-btn">
+                    <i class="fas fa-sign-out-alt"></i> Выход
+                </button>
+            </form>
+        </div>
+
+        <div class="profile-header">
+            <img src="@Model.Avatar" class="profile-avatar" alt="Аватар">
+            <div class="profile-info">
+                <h1 class="profile-username">@Model.Username</h1>
+                <div class="profile-meta">
+                    <span class="profile-meta-item">Зарегистрирован: @Model.DataRegistration.ToShortDateString()</span>
+                    <span class="profile-meta-item">Последний раз онлайн: @Model.LastOnline</span>
                 </div>
-            }
-        }
-        else
-        {
-            <p>Пока нет комментариев</p>
-        }
-    </div>
-    <div>
-            
-            <p>Cредняя оценка: @(ViewBag.SocialCredits?.ToString("0.00") ?? "нет данных")</p>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2 class="profile-section-title">Описание</h2>
+            <div class="profile-description">
+                @if (string.IsNullOrEmpty(Model.Discription))
+                {
+                    <p class="profile-no-description">Описания пока нет :(, Добавьте источники где с вами смогут связаться другие игроки.</p>
+                }
+                else
+                {
+                    <p class="profile-description-text">@Model.Discription</p>
+                }
+            </div>
+            <form asp-controller="ProfileUser" asp-action="UserDiscription" method="post" class="profile-description-form">
+                <input type="text" name="discrip" placeholder="Добавить/изменить описание" class="profile-description-input">
+                <button type="submit" class="profile-description-btn">Сохранить</button>
+            </form>
+        </div>
+
+        <div class="profile-section">
+            <h2 class="profile-section-title">Игры <span class="profile-game-count">(@ViewBag.GameCount)</span></h2>
+            <div class="profile-games">
+                @if (ViewBag.AllGames != null && ViewBag.AllGames.Count > 0)
+                {
+                    @foreach (var gameUser in ViewBag.AllGames)
+                    {
+                        <div class="profile-game-card">
+                            <div class="profile-game-info">
+                                <h3 class="profile-game-name">@gameUser.IdGameNavigation.Name</h3>
+                                <div class="profile-game-details">
+                                    <span class="profile-game-detail">Ранг: @gameUser.Rank</span>
+                                    <span class="profile-game-detail">Роль: @gameUser.Role</span>
+                                </div>
+                            </div>
+                            <form asp-controller="UpdateOrDelete" asp-action="UpOrDel" method="post">
+                                <button type="submit" class="profile-game-edit-btn">
+                                    <i class="fas fa-edit"></i> Редактировать
+                                </button>
+                            </form>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="profile-no-games">У пользователя пока нет игр</p>
+                }
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2 class="profile-section-title">Комментарии</h2>
+            <div class="profile-rating">
+                <span class="profile-rating-label">Средняя оценка:</span>
+                <span class="profile-rating-value">@(ViewBag.SocialCredits?.ToString("0.00") ?? "нет данных")</span>
+            </div>
+            <div class="profile-comments">
+                @if (ViewBag.Comments != null && ViewBag.Comments.Count > 0)
+                {
+                    @foreach (var comm in ViewBag.Comments)
+                    {
+                        <div class="profile-comment">
+                            <img src="@comm.IdUserNavigation?.Avatar" class="profile-comment-avatar" />
+                            <div class="profile-comment-content">
+                                <div class="profile-comment-header">
+                                    <strong class="profile-comment-author">@comm.IdUserNavigation?.Username</strong>
+                                    <span class="profile-comment-rating">Оценка: @comm.Grade</span>
+                                </div>
+                                <p class="profile-comment-text">@comm.Comm1</p>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="profile-no-comments">Пока нет комментариев</p>
+                }
+            </div>
+        </div>
+
+        <form asp-controller="ViewAdversment" asp-action="AllUserAdversmet" method="post" class="profile-advertisements-form">
+            <button type="submit" class="profile-advertisements-btn">
+                <i class="fas fa-bullhorn"></i> Мои объявления
+            </button>
+        </form>
     </div>
 </div>
-<button asp-controller="ViewAdversment" asp-action="AllUserAdversmet">Мои объявлеиня</button>
-</form>
+

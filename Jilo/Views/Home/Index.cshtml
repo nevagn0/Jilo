@@ -95,26 +95,10 @@
         </div>
     </div>
 </div>
-<form asp-controller="SearchTim" asp-action="SearchUser" method="get">
-    <div class="search-box">
-        <input type="text" name="name" placeholder="Введите имя">
-        <button type="submit" asp-controller="SearchTim" asp-action="UserFind">Поиск</button>
-    </div>
-    <div class="user-list">
-        @if (Model != null && Model.Any())
-        {
-            @foreach (var user in Model)
-            {
-                <div class="user-card">
-                    <img src="@user.Avatar" alt="@user.Username" class="user-avatar">
-                    <span>@user.Username</span>
-                </div>
-            }
-        }
-        else
-        {
-            <a>Пользователь не найден</a>
-        }
+<form asp-controller="SearchTim" asp-action="SearchUser" method="get" class="searchuser-form">
+    <div class="searchuser-input-group">
+        <input type="text" name="push" placeholder="Введите имя пользователя" class="searchuser-input" value="@Context.Request.Query["push"]">
+        <button type="submit" class="searchuser-submit-btn">Поиск</button>
     </div>
 </form>
 
