@@ -4,9 +4,11 @@
 }
 <div class="registration-page">
     <div class="registration-container">
-        <button asp-controller="Back" asp-action="RegistrationBack" class="back-btn">
-            <i class="fas fa-arrow-left"></i> Назад
-        </button>
+        <form asp-controller="Back" asp-action="RegistrationBack" method="post">
+            <button class="back-btn">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
+        </form>
 
         <div class="registration-header">
             <h1 class="registration-title">Вход в аккаунт</h1>

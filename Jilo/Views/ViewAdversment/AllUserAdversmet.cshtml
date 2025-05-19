@@ -1,60 +1,71 @@
 ﻿@model List<AdversmetUser>
-
 @{
-	ViewData["Title"] = "Мои объявления";
+    ViewData["Title"] = "Мои объявления";
 }
-<form asp-action="AllUserAdverstmet">
-    <div>
-        <button asp-controller="Back" asp-action="Profile">Назад</button>
-    </div>
-    @if (Model.Any())
-    {
-        <div class="row">
-            @foreach (var ad in Model)
-            {
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">@ad.IdGameNavigation.Name</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                Автор: @ad.IdUserNavigation.Username
-                            </h6>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                Откликнулся:
-                                <a asp-controller="ViewAdversment"
-                                   asp-action="SecondUserProfileOpen"
-                                   asp-route-username="@ad.NameSecondUser">
-                                    @ad.NameSecondUser
-                                </a>
-                            </h6>
-                            <p class="card-text"> Описание: @ad.Discription</p>
-                            <p class="card-text">
-                                <small class="text-muted">
-                                    Дата создания: @ad.DateCreate?.ToString("dd.MM.yyyy")
-                                </small>
-                            </p>
 
-                            @if (ad.IdSecondUser == null)
+<div class="adversmet-page">
+    <div class="adversmet-container">
+        <form asp-controller="Back" asp-action="Profile" method="post" class="adversmet-back-form">
+            <button type="submit" class="adversmet-back-btn">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
+        </form>
+
+        <div class="adversmet-header">
+            <h1 class="adversmet-title">Мои объявления</h1>
+        </div>
+
+        @if (TempData["Message"] != null)
+        {
+            <div class="adversmet-message @(TempData["MessageType"]?.ToString() == "success" ? "adversmet-message-success" : "adversmet-message-error")">
+                @TempData["Message"]
+            </div>
+        }
+
+        @if (Model.Any())
+        {
+            <div class="adversmet-grid">
+                @foreach (var ad in Model)
+                {
+                    <div class="adversmet-card">
+                        <div class="adversmet-card-body">
+                            <h3 class="adversmet-card-title">@ad.IdGameNavigation.Name</h3>
+                            <div class="adversmet-card-meta">
+                                <span>Дата создания: @ad.DateCreate?.ToString("dd.MM.yyyy")</span>
+                            </div>
+                            <p class="adversmet-card-text">@ad.Discription</p>
+
+                            @if (ad.IdSecondUser != null)
                             {
-                                <form asp-action="RespondToAd" method="post">
-                                    <input type="hidden" name="idUser" value="@ad.IdUser" />
-                                    <input type="hidden" name="idGame" value="@ad.IdGame" />
-                                </form>
-                            }
-                            else
-                            {
-                                <div class="alert alert-info">
-                                    На это объявление уже откликнулись
+                                <div class="adversmet-card-response">
+                                    <span>Откликнулся:</span>
+                                    <a asp-controller="ViewAdversment"
+                                       asp-action="SecondUserProfileOpen"
+                                       asp-route-username="@ad.NameSecondUser">
+                                        @ad.NameSecondUser
+                                    </a>
                                 </div>
                             }
+
+                            <form asp-controller="UpdateOrDelete" asp-action="DeleteAdverstment" method="post"
+                                  class="adversmet-delete-form">
+                                <input type="hidden" name="idUser" value="@ad.IdUser" />
+                                <input type="hidden" name="idGame" value="@ad.IdGame" />
+                                <button type="submit" class="adversmet-delete-btn">
+                                    Удалить объявление
+                                </button>
+                            </form>
                         </div>
                     </div>
-                </div>
-            }
-        </div>
-    }
-    else
-    {
-        <div class="alert alert-info">Объявлений пока нет</div>
-    }
-</form>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="adversmet-empty">
+                У вас пока нет объявлений
+            </div>
+        }
+    </div>
+</div>
+

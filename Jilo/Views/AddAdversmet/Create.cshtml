@@ -1,26 +1,48 @@
 ﻿@model List<Game>
 @{
-    ViewData["Title"] = "Добавление игры";
+    ViewData["Title"] = "Создание объявления";
 }
-<h2>Создать новое объявление</h2>
-<form>
-    <button asp-controller="Back" asp-action="AddGames">Назад</button>
-</form>
-<form asp-controller="AddAdversmet" asp-action="CreateVersment" method="post">
-    <div class="form-group">
-        <label>Выберите игру:</label>
-        <select name="selectedGameId" class="form-control" required>
-            @foreach (var game in ViewBag.game)
-            {
-                <option value="@game.Id">@game.Name</option>
-            }
-        </select>
-    </div>
 
-    <div class="form-group">
-        <label>Описание:</label>
-        <textarea name="discription" class="form-control" required></textarea>
-    </div>
+<div class="create-page">
+    <div class="create-container">
+        <!-- Кнопка Назад -->
+        <form asp-controller="Back" asp-action="AddGames" method="post" class="create-back-form">
+            <button type="submit" class="create-back-btn">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
+        </form>
 
-    <button type="submit" class="btn btn-primary">Создать объявление</button>
-</form>
+        <div class="create-header">
+            <h1 class="create-title">Создать новое объявление</h1>
+            <p class="create-subtitle">Заполните информацию о вашем объявлении</p>
+        </div>
+
+        <!-- Блок для отображения сообщений -->
+        @if (ViewBag.Message != null)
+        {
+            <div class="create-message @(ViewBag.MessageType == "success" ? "create-message-success" : "create-message-error")">
+                @ViewBag.Message
+            </div>
+        }
+
+        <form asp-controller="AddAdversmet" asp-action="CreateVersment" method="post" class="create-form">
+            <div class="create-form-group">
+                <label class="create-label">Выберите игру:</label>
+                <select name="selectedGameId" class="create-select" required>
+                    @foreach (var game in ViewBag.game)
+                    {
+                        <option value="@game.Id">@game.Name</option>
+                    }
+                </select>
+            </div>
+
+            <div class="create-form-group">
+                <label class="create-label">Описание объявления:</label>
+                <textarea name="discription" class="create-textarea" placeholder="Опишите что вы предлагаете или ищете" required></textarea>
+            </div>
+
+            <button type="submit" class="create-submit-btn">Создать объявление</button>
+        </form>
+    </div>
+</div>
+

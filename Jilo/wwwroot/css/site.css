@@ -594,3 +594,963 @@ form {
         grid-template-columns: 1fr;
     }
 }
+/* ==================== AddGame Style ==================== */
+.addgame-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+    .addgame-page::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+        animation: pulse 15s infinite linear;
+        z-index: 0;
+    }
+
+.addgame-container {
+    position: relative;
+    z-index: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid #1c1c1c;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.addgame-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+}
+
+    .addgame-back-btn:hover {
+        color: #1c1c1c;
+        transform: translateX(-3px);
+    }
+
+.addgame-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.addgame-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
+}
+
+.addgame-subtitle {
+    font-size: 1.1rem;
+    color: #2e2e2e;
+    margin-bottom: 2rem;
+}
+
+.addgame-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.addgame-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 2px solid #1c1c1c;
+}
+
+    .addgame-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+.addgame-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.addgame-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.addgame-card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.addgame-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1c1c1c;
+}
+
+.addgame-card-desc {
+    color: #2e2e2e;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.addgame-form-group {
+    margin-bottom: 1rem;
+}
+
+.addgame-form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2e2e2e;
+}
+
+.addgame-form-select,
+.addgame-form-control {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+    .addgame-form-select:focus,
+    .addgame-form-control:focus {
+        border-color: #1c1c1c;
+        box-shadow: 0 0 0 3px rgba(28, 28, 28, 0.1);
+        outline: none;
+    }
+
+.addgame-submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+    .addgame-submit-btn:hover {
+        background-color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+@@media (max-width: 768px) {
+    .addgame-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .addgame-container {
+        padding: 1.5rem;
+    }
+
+    .addgame-title {
+        font-size: 2rem;
+    }
+}
+/* ==================== SearchUser Style ==================== */
+.searchuser-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+    .searchuser-page::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+        animation: pulse 15s infinite linear;
+        z-index: 0;
+    }
+
+.searchuser-container {
+    position: relative;
+    z-index: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #1c1c1c;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.searchuser-back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+}
+
+    .searchuser-back-btn:hover {
+        color: #1c1c1c;
+        transform: translateX(-3px);
+    }
+
+.searchuser-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.searchuser-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 0.5rem;
+}
+
+.searchuser-subtitle {
+    font-size: 1.1rem;
+    color: #2e2e2e;
+    margin-bottom: 2rem;
+}
+
+.searchuser-form {
+    margin-bottom: 2rem;
+}
+
+.searchuser-input-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.searchuser-input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+    .searchuser-input:focus {
+        border-color: #1c1c1c;
+        box-shadow: 0 0 0 3px rgba(28, 28, 28, 0.1);
+        outline: none;
+    }
+
+.searchuser-submit-btn {
+    padding: 0 1.5rem;
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .searchuser-submit-btn:hover {
+        background-color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+.searchuser-results {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.searchuser-user-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+    .searchuser-user-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-color: #1c1c1c;
+    }
+
+.searchuser-user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+}
+
+.searchuser-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.searchuser-username {
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+.searchuser-user-status {
+    font-size: 0.8rem;
+    color: #2e2e2e;
+}
+
+.searchuser-no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #2e2e2e;
+}
+
+@@media (max-width: 768px) {
+    .searchuser-container {
+        padding: 1.5rem;
+    }
+
+    .searchuser-title {
+        font-size: 2rem;
+    }
+
+    .searchuser-input-group {
+        flex-direction: column;
+    }
+
+    .searchuser-submit-btn {
+        padding: 0.75rem;
+        width: 100%;
+    }
+}
+
+/* ==================== UserFind Style ==================== */
+.userfind-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.userfind-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 2px solid #1c1c1c;
+    position: relative;
+}
+
+.userfind-back-form {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.userfind-back-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+}
+
+    .userfind-back-btn:hover {
+        color: #1c1c1c;
+        transform: translateX(-3px);
+    }
+
+.userfind-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.userfind-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e0e0e0;
+}
+
+.userfind-info {
+    flex-grow: 1;
+}
+
+.userfind-username {
+    font-size: 2rem;
+    margin: 0;
+    color: #1c1c1c;
+}
+
+.userfind-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.userfind-meta-item {
+    font-size: 0.9rem;
+    color: #2e2e2e;
+}
+
+.userfind-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.userfind-section-title {
+    font-size: 1.5rem;
+    color: #1c1c1c;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.userfind-description-text,
+.userfind-no-description {
+    line-height: 1.6;
+    color: #333;
+}
+
+.userfind-no-description {
+    color: #666;
+    font-style: italic;
+}
+
+.userfind-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.userfind-game-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+}
+
+.userfind-game-name {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    color: #1c1c1c;
+}
+
+.userfind-game-role,
+.userfind-game-rank {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    color: #2e2e2e;
+}
+
+.userfind-no-games {
+    color: #666;
+    font-style: italic;
+}
+
+.userfind-comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.userfind-comment {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.userfind-comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.userfind-comment-content {
+    flex-grow: 1;
+}
+
+.userfind-comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.userfind-comment-author {
+    color: #1c1c1c;
+}
+
+.userfind-comment-rating {
+    color: #2e2e2e;
+    font-size: 0.9rem;
+}
+
+.userfind-comment-text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.userfind-no-comments {
+    color: #666;
+    font-style: italic;
+}
+
+.userfind-comment-form {
+    margin-top: 1rem;
+}
+
+.userfind-form-group {
+    margin-bottom: 1rem;
+}
+
+.userfind-comment-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.userfind-rating-input {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    width: 100px;
+}
+
+.userfind-submit-btn {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .userfind-submit-btn:hover {
+        background-color: #000000;
+        transform: translateY(-2px);
+    }
+
+@@media (max-width: 768px) {
+    .userfind-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .userfind-meta {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .userfind-games {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* ==================== AddAdverstment Style ==================== */
+.create-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+    .create-page::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+        animation: pulse 15s infinite linear;
+        z-index: 0;
+    }
+
+.create-container {
+    position: relative;
+    z-index: 1;
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #1c1c1c;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.create-back-form {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.create-back-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+}
+
+    .create-back-btn:hover {
+        color: #1c1c1c;
+        transform: translateX(-3px);
+    }
+
+.create-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.create-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1c1c1c;
+    margin-bottom: 0.5rem;
+}
+
+.create-subtitle {
+    font-size: 1rem;
+    color: #2e2e2e;
+    margin-bottom: 2rem;
+}
+
+.create-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.create-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.create-label {
+    font-weight: 600;
+    color: #1c1c1c;
+    font-size: 0.95rem;
+}
+
+.create-select,
+.create-textarea {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+    .create-select:focus,
+    .create-textarea:focus {
+        border-color: #1c1c1c;
+        box-shadow: 0 0 0 3px rgba(28, 28, 28, 0.1);
+        outline: none;
+    }
+
+.create-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em;
+}
+
+.create-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.create-submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+    .create-submit-btn:hover {
+        background-color: #000000;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+@@media (max-width: 768px) {
+    .create-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .create-title {
+        font-size: 1.75rem;
+    }
+}
+
+.create-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.create-message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.create-message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.create-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==================== Свои объявления Style ==================== */
+
+.adversmet-page {
+    background: linear-gradient(135deg, #f4f4f4 0%, #ffffff 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.adversmet-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 2px solid #1c1c1c;
+    position: relative;
+}
+
+.adversmet-back-form {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.adversmet-back-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #2e2e2e;
+    transition: all 0.3s ease;
+}
+
+    .adversmet-back-btn:hover {
+        color: #1c1c1c;
+        transform: translateX(-3px);
+    }
+
+.adversmet-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.adversmet-title {
+    font-size: 2rem;
+    color: #1c1c1c;
+    margin-bottom: 0.5rem;
+}
+
+.adversmet-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.adversmet-message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.adversmet-message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.adversmet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.adversmet-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+    .adversmet-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+.adversmet-card-body {
+    padding: 1.5rem;
+}
+
+.adversmet-card-title {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+    color: #1c1c1c;
+}
+
+.adversmet-card-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.adversmet-card-text {
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.adversmet-card-response {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.adversmet-delete-form {
+    margin-top: 1.5rem;
+}
+
+.adversmet-delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+    .adversmet-delete-btn:hover {
+        background-color: #c82333;
+    }
+
+.adversmet-empty {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+@@media (max-width: 768px) {
+    .adversmet-grid {
+        grid-template-columns: 1fr;
+    }
+}

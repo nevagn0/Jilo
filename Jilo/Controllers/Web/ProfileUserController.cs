@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 using Jilo.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -49,8 +50,25 @@ namespace Jilo.Controllers.Web
             var SocialCredits = await _context.Comms.Where(t => t.Targetuser == userr.Id).AverageAsync(t => t.Grade);
             ViewBag.SocialCredits = SocialCredits;
 
+            ViewBag.Discription = userr.Discription;
             return View(userr);
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> UserDiscription(string discrip)
+        {
+            var username = User.Identity?.Name;
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.Discription = discrip;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Profile","ProfileUser");
         }
     }
 }

@@ -1,60 +1,111 @@
 ﻿@model User
 @{
-    ViewData["Title"] = "UserFind";
+    ViewData["Title"] = "Профиль пользователя";
 }
-    <div class="profile-container">
-        <div class="profile-header">
-            <img src="@Model.Avatar" class="profile-avatar">
-            <h1>@Model.Username</h1>
-            <p>Зарегистрирован: @Model.DataRegistration.ToShortDateString()</p>
-            <p>Последний раз онлайн: @Model.LastOnline</p>
-        </div>
 
-        <div class="profile-games">
-            <h2>Игры пользователя:</h2>
-            @foreach (var gameUser in Model.GamesUsers)
-            {
-                <div class="game-card">
-                    <h3>@gameUser.IdGameNavigation.Name</h3>
-                    <p>Роль: @gameUser.Role</p>
-                </div>
-            }
-        </div>
+<div class="userfind-page">
+    <div class="userfind-container">
+        <!-- Кнопка Назад -->
+        <button onclick="window.history.back()" type="submit" class="userfind-back-btn">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
 
-        <div>
-            <h2>Комментарии:</h2>
-            @foreach (var comm in ViewBag.Comments)
-            {
-            <div class="comment">
-                <img src="@comm.IdUserNavigation?.Avatar" class="comment-avatar" />
-                <div>
-                    <p><strong>@comm.IdUserNavigation?.Username:</strong> @comm.Comm1</p>
-                    <p>Оценка: @comm.Grade</p>
+        <div class="userfind-header">
+            <img src="@Model.Avatar" class="userfind-avatar">
+            <div class="userfind-info">
+                <h1 class="userfind-username">@Model.Username</h1>
+                <div class="userfind-meta">
+                    <span class="userfind-meta-item">Зарегистрирован: @Model.DataRegistration.ToShortDateString()</span>
+                    <span class="userfind-meta-item">Последний раз онлайн: @Model.LastOnline</span>
                 </div>
             </div>
-            }
         </div>
 
-        <form asp-controller="SearchTim" asp-action="AddComm" method="post">
-            <input type="hidden" name="targetUser" value="@Model.Id" />
-            <div>
-                <input type="text" name="comm" placeholder="Напишите комментарий" />
+        <div class="userfind-section">
+            <h2 class="userfind-section-title">Описание</h2>
+            <div class="userfind-description">
+                @if (string.IsNullOrEmpty(Model.Discription))
+                {
+                    <p class="userfind-no-description">Описания пока нет :(, Добавьте источники где с вами смогут связаться другие игроки.</p>
+                }
+                else
+                {
+                    <p class="userfind-description-text">@Model.Discription</p>
+                }
             </div>
-            <div>
-                <input type="number" name="grade" min="1" max="5" step="0.1" placeholder="Оценка (1-5)" />
+        </div>
+
+        <div class="userfind-section">
+            <h2 class="userfind-section-title">Игры пользователя</h2>
+            <div class="userfind-games">
+                @if (Model.GamesUsers != null && Model.GamesUsers.Any())
+                {
+                    @foreach (var gameUser in Model.GamesUsers)
+                    {
+                        <div class="userfind-game-card">
+                            <h3 class="userfind-game-name">@gameUser.IdGameNavigation.Name</h3>
+                            <p class="userfind-game-role">Роль: @gameUser.Role</p>
+                            <p class="userfind-game-rank">Ранг: @gameUser.Rank</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="userfind-no-games">Пользователь пока не добавил игры</p>
+                }
             </div>
-            <button type="submit">Отправить</button>
-        </form>
+        </div>
+
+        <div class="userfind-section">
+            <h2 class="userfind-section-title">Комментарии</h2>
+            <div class="userfind-comments">
+                @if (ViewBag.Comments != null && ViewBag.Comments.Count > 0)
+                {
+                    @foreach (var comm in ViewBag.Comments)
+                    {
+                        <div class="userfind-comment">
+                            <img src="@comm.IdUserNavigation?.Avatar" class="userfind-comment-avatar" />
+                            <div class="userfind-comment-content">
+                                <div class="userfind-comment-header">
+                                    <strong class="userfind-comment-author">@comm.IdUserNavigation?.Username</strong>
+                                    <span class="userfind-comment-rating">Оценка: @comm.Grade</span>
+                                </div>
+                                <p class="userfind-comment-text">@comm.Comm1</p>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="userfind-no-comments">Пока нет комментариев</p>
+                }
+            </div>
+        </div>
+            <div class="userfind-section">
+                <h2 class="userfind-section-title">Оставить комментарий</h2>
+                <form asp-controller="SearchTim" asp-action="AddComm" method="post" class="userfind-comment-form">
+                    <input type="hidden" name="targetUser" value="@Model.Id" />
+                    <div class="userfind-form-group">
+                        <textarea name="comm" class="userfind-comment-input" placeholder="Напишите комментарий" required></textarea>
+                    </div>
+                    <div class="userfind-form-group">
+                        <input type="number" name="grade" min="1" max="5" step="0.1" class="userfind-rating-input" placeholder="Оценка (1-5)" required>
+                    </div>
+                    <button type="submit" class="userfind-submit-btn">Отправить</button>
+                </form>
+            </div>
     </div>
+</div>
 
 <script>
-    document.getElementById('commentForm')?.addEventListener('submit', function(e) {
+    document.querySelector('.userfind-comment-form')?.addEventListener('submit', function(e) {
     @if (!User.Identity.IsAuthenticated)
     {
         <text>
-                e.preventDefault();
-                window.location.href = '@Url.Action("Index", "Registration")?returnUrl=' +
-                    encodeURIComponent('@Url.Action("UserFind", new { name = Model.Username })');
+                    e.preventDefault();
+                    window.location.href = '@Url.Action("Index", "Registration")?returnUrl=' +
+                        encodeURIComponent('@Url.Action("UserFind", new { name = Model.Username })');
         </text>
     }
     });
+</script>

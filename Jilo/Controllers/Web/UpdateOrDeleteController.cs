@@ -50,5 +50,35 @@ namespace Jilo.Controllers.Web
             return RedirectToAction("UpOrDel");
         }
 
+        [HttpPost("DeleteAdverstment")]
+        public async Task<IActionResult> DeleteAdverstment(int idUser, int idGame)
+        {
+            var currentUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            if (currentUserId != idUser)
+            {
+                TempData["Message"] = "Вы можете удалять только свои объявления";
+                TempData["MessageType"] = "error";
+                return RedirectToAction("AllUserAdversmet", "ViewAdversment");
+            }
+
+            var adverstment = await _context.AdversmetUsers
+                .FirstOrDefaultAsync(v => v.IdUser == idUser && v.IdGame == idGame);
+
+            if (adverstment == null)
+            {
+                TempData["Message"] = "Объявление не найдено";
+                TempData["MessageType"] = "error";
+                return RedirectToAction("AllUserAdversmet", "ViewAdversment");
+            }
+
+            _context.Remove(adverstment);
+            await _context.SaveChangesAsync();
+
+            TempData["Message"] = "Объявление успешно удалено";
+            TempData["MessageType"] = "success";
+            return RedirectToAction("AllUserAdversmet", "ViewAdversment");
+        }
+
     }
 }

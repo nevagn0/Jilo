@@ -17,6 +17,18 @@
     <div>
             <a>Последний раз онлайн @Model.LastOnline</a>
     </div>
+        @if (string.IsNullOrEmpty(Model.Discription))
+        {
+            <p>Описания пока нет :(, Добавьте источники где с вами смогут связаться другие игроки.</p>
+        }
+        else
+        {
+            <p>@Model.Discription</p>
+        }
+    <div>
+            <input type="text" name="discrip" placeholder="Описание" />
+            <button asp-controller="ProfileUser" asp-action="UserDiscription">Сохранить/Редактировать</button>
+    </div>
     <p>Всего игр: @ViewBag.GameCount</p>
     
     @if (ViewBag.AllGames != null && ViewBag.AllGames.Count > 0)

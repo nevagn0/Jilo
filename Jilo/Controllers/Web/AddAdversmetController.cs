@@ -19,6 +19,8 @@ namespace Jilo.Controllers.Web
         {
             var games = _context.Games.ToList();
             ViewBag.game = games;
+            ViewBag.Message = TempData["Message"];
+            ViewBag.MessageType = TempData["MessageType"];
             return View();
         }
 
@@ -35,6 +37,16 @@ namespace Jilo.Controllers.Web
             if (user == null)
             {
                 return NotFound("Пользователь не найден в базе данных.");
+            }
+
+            var existingAd = await _context.AdversmetUsers
+                .FirstOrDefaultAsync(a => a.IdUser == user.Id && a.IdGame == selectedGameId);
+
+            if (existingAd != null)
+            {
+                TempData["Message"] = "У вас уже есть активное объявление для этой игры.";
+                TempData["MessageType"] = "error";
+                return RedirectToAction("Create");
             }
 
             var game = await _context.Games.FindAsync(selectedGameId);
@@ -56,15 +68,17 @@ namespace Jilo.Controllers.Web
             {
                 await _context.AddAsync(adverstment);
                 await _context.SaveChangesAsync();
+
+                TempData["Message"] = "Объявление успешно создано!";
+                TempData["MessageType"] = "success";
             }
             catch (Exception ex)
             {
-                return BadRequest($"Ошибка при создании объявления: {ex.Message}");
+                TempData["Message"] = $"Ошибка при создании объявления: {ex.Message}";
+                TempData["MessageType"] = "error";
             }
 
-            var games = await _context.Games.ToListAsync();
-            ViewBag.game = games;
-            return View("Create", games);
+            return RedirectToAction("Create");
         }
     }
 }

@@ -271,6 +271,27 @@
   },
   {
     "ContainingType": "Jilo.Controllers.Web.UpdateOrDeleteController",
+    "Method": "DeleteAdverstment",
+    "RelativePath": "UpdateOrDelete/DeleteAdverstment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUser",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idGame",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Jilo.Controllers.Web.UpdateOrDeleteController",
     "Method": "Update",
     "RelativePath": "UpdateOrDelete/Update",
     "HttpMethod": "POST",

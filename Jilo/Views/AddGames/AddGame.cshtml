@@ -2,28 +2,36 @@
 @{
     ViewData["Title"] = "Выбор игр";
 }
-<div class="container">
-    <h2 class="my-4">Выберите свои игры</h2>
-    <div>
-        <button onclick="window.history.back()">Назад</button>
-    </div>
-    <div class="row">
-        @foreach (var game in Model)
-        {
-            <form asp-controller="AddGames" asp-action="AddGame" method="post">
-             <input type="hidden" name="__RequestVerificationToken" value="@Html.AntiForgeryToken()" />
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <img src="@game.Avatar" class="card-img-top" alt="@game.Name" style="height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">@game.Name</h5>
-                            <p class="card-text">@game.Discrip</p>
 
-                            <input type="hidden" name="gameId" value="@game.Id" />
+<div class="addgame-page">
+    <div class="addgame-container">
+        <form>
+            <button asp-controller="Back" asp-action="AddGames" class="addgame-back-btn">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
+        </form>
 
-                            <div class="mb-3">
-                                <label class="form-label">Ранг</label>
-                                <select name="rank" class="form-select">
+        <div class="addgame-header">
+            <h1 class="addgame-title">Выберите свои игры</h1>
+            <p class="addgame-subtitle">Добавьте игры, в которые вы играете</p>
+        </div>
+
+        <div class="addgame-grid">
+            @foreach (var game in Model)
+            {
+                <form asp-controller="AddGames" asp-action="AddGame" method="post" class="addgame-card">
+                    <input type="hidden" name="__RequestVerificationToken" value="@Html.AntiForgeryToken()" />
+                    <input type="hidden" name="gameId" value="@game.Id" />
+
+                    <div class="addgame-card-inner">
+                        <img src="@game.Avatar" class="addgame-img" alt="@game.Name">
+                        <div class="addgame-card-content">
+                            <h3 class="addgame-card-title">@game.Name</h3>
+                            <p class="addgame-card-desc">@game.Discrip</p>
+
+                            <div class="addgame-form-group">
+                                <label class="addgame-form-label">Ранг</label>
+                                <select name="rank" class="addgame-form-select">
                                     <option value="Новичок">Новичок</option>
                                     <option value="Любитель">Любитель</option>
                                     <option value="Опытный">Опытный</option>
@@ -31,19 +39,22 @@
                                 </select>
                             </div>
 
-                            <div class="mb-3">
-                                <label class="form-label">Роль</label>
-                                <input type="text" name="role" class="form-control" placeholder="Ваша роль в игре" value="Игрок">
+                            <div class="addgame-form-group">
+                                <label class="addgame-form-label">Роль</label>
+                                <input type="text" name="role" class="addgame-form-control" placeholder="Ваша роль в игре" value="Игрок">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Часы в игре</label>
-                                <input type="text" name="TimeInGame" class="form-control" placeholder="Часы">
+
+                            <div class="addgame-form-group">
+                                <label class="addgame-form-label">Часы в игре</label>
+                                <input type="text" name="TimeInGame" class="addgame-form-control" placeholder="Часы">
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Добавить игру</button>
+
+                            <button type="submit" class="addgame-submit-btn">Добавить игру</button>
                         </div>
                     </div>
-                </div>
-            </form>
-        }
+                </form>
+            }
+        </div>
     </div>
 </div>
+

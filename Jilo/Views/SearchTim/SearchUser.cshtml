@@ -1,29 +1,48 @@
 ﻿@model List<User>
 @{
-	ViewData["Title"] = "Search";
+    ViewData["Title"] = "Поиск пользователей";
 }
-<form asp-controller="SearchTim" asp-action="SearchUser" method="get">
-    <div>
-        <button asp-controller="Back" asp-action="AddGames">Назад</button>
-    </div>
-    <div class="search-box">
-        <input type="text" name="name" placeholder="Введите имя">
-        <button type="submit" asp-controller="SearchTim" asp-action="UserFind">Поиск</button>
-    </div>
-    <div class="user-list">
-        @if(Model != null && Model.Any())
-        {
-            @foreach(var user in Model)
+
+<div class="searchuser-page">
+    <div class="searchuser-container">
+        <form asp-controller="Back" asp-action="AddGames" method="post" class="searchuser-back-form">
+            <button type="submit" class="searchuser-back-btn">
+                <i class="fas fa-arrow-left"></i> Назад
+            </button>
+        </form>
+
+        <div class="searchuser-header">
+            <h1 class="searchuser-title">Поиск пользователей</h1>
+            <p class="searchuser-subtitle">Найдите других игроков по имени</p>
+        </div>
+
+        <form asp-controller="SearchTim" asp-action="SearchUser" method="get" class="searchuser-form">
+            <div class="searchuser-input-group">
+                <input type="text" name="push" placeholder="Введите имя пользователя" class="searchuser-input" value="@Context.Request.Query["push"]">
+                <button type="submit" class="searchuser-submit-btn">Поиск</button>
+            </div>
+        </form>
+
+        <div class="searchuser-results">
+            @if (Model != null && Model.Any())
             {
-                <div class="user-card">
-                    <img src="@user.Avatar" alt="@user.Username" class="user-avatar">
-                    <span>@user.Username</span>
+                @foreach (var user in Model)
+                {
+                    <a asp-controller="SearchTim" asp-action="UserFind" asp-route-name="@user.Username" class="searchuser-user-card">
+                        <img src="@user.Avatar" alt="@user.Username" class="searchuser-user-avatar">
+                        <div class="searchuser-user-info">
+                            <span class="searchuser-username">@user.Username</span>
+                            <span class="searchuser-user-status">Был(а) онлайн: @user.LastOnline</span>
+                        </div>
+                    </a>
+                }
+            }
+            else if (!string.IsNullOrEmpty(Context.Request.Query["push"]))
+            {
+                <div class="searchuser-no-results">
+                    <p>Пользователи не найдены</p>
                 </div>
             }
-        }
-        else
-        {
-            <a>Пользователь не найден</a>
-        }
+        </div>
     </div>
-</form>
+</div>
