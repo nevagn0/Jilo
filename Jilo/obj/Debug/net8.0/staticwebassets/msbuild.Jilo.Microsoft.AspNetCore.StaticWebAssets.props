@@ -1098,6 +1098,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\02560029-961e-42d0-964a-9915452d61c8_colda.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Jilo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Jilo</BasePath>
+      <RelativePath>uploads/02560029-961e-42d0-964a-9915452d61c8_colda.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0i7nbf3c27</Fingerprint>
+      <Integrity>uDxwOi8a38xtUqmpjsHMXBqugXFxCTwL7/VWERotNOU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\02560029-961e-42d0-964a-9915452d61c8_colda.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\085db39af6bdf1f0d607584bd8f105d3.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Jilo</SourceId>
@@ -1133,6 +1151,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\58dd3a50-38b6-42ff-b331-e5666a68b039_навальный.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Jilo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Jilo</BasePath>
+      <RelativePath>uploads/58dd3a50-38b6-42ff-b331-e5666a68b039_навальный.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4tstwmo6yp</Fingerprint>
+      <Integrity>6JCnWTDtkyaPBR/uUiaJNgLFvhnPN3cVQ4f10+TAwHU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\58dd3a50-38b6-42ff-b331-e5666a68b039_навальный.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\60b02ed3-f229-4f3a-98a6-6543eb634ba9_deepseek_mermaid_20250505_58e1c2.png'))">
       <SourceType>Package</SourceType>
@@ -1188,6 +1224,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\841cb1d4-e34f-49c9-99b4-7a29e1fbe6ba_deepseek_mermaid_20250505_58e1c2.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\8a5b5f25-17f1-4ecc-953d-9206929864a6_навальный.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Jilo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Jilo</BasePath>
+      <RelativePath>uploads/8a5b5f25-17f1-4ecc-953d-9206929864a6_навальный.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4tstwmo6yp</Fingerprint>
+      <Integrity>6JCnWTDtkyaPBR/uUiaJNgLFvhnPN3cVQ4f10+TAwHU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\8a5b5f25-17f1-4ecc-953d-9206929864a6_навальный.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\9379d831-2de2-436a-983f-ad26ef315d5c_colda.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Jilo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Jilo</BasePath>
+      <RelativePath>uploads/9379d831-2de2-436a-983f-ad26ef315d5c_colda.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0i7nbf3c27</Fingerprint>
+      <Integrity>uDxwOi8a38xtUqmpjsHMXBqugXFxCTwL7/VWERotNOU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\9379d831-2de2-436a-983f-ad26ef315d5c_colda.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\b38b9813-7391-4595-a193-6948c5040ea5_085db39af6bdf1f0d607584bd8f105d3.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Jilo</SourceId>
@@ -1241,6 +1313,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cs2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dbee4b35-360f-4e00-95f0-193bd46957f7_colda.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Jilo</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Jilo</BasePath>
+      <RelativePath>uploads/dbee4b35-360f-4e00-95f0-193bd46957f7_colda.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>0i7nbf3c27</Fingerprint>
+      <Integrity>uDxwOi8a38xtUqmpjsHMXBqugXFxCTwL7/VWERotNOU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dbee4b35-360f-4e00-95f0-193bd46957f7_colda.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\dota2.jpg'))">
       <SourceType>Package</SourceType>

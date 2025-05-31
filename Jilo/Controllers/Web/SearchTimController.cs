@@ -98,16 +98,23 @@ namespace Jilo.Controllers.Web
             return RedirectToAction("SearchUser");
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteProfile(int userId)
         {
-            var username = await _context.Users.FindAsync(userId);
-            if (username == null)
+            var currentUser = await _context.Users
+                .FirstOrDefaultAsync(u => u.Username == User.Identity.Name);
+
+            if (currentUser?.Username != "ters0n")
+            {
+                return Forbid();
+            }
+
+            var userToDelete = await _context.Users.FindAsync(userId);
+            if (userToDelete == null)
             {
                 return NotFound();
             }
 
-            _context.Remove(username);
+            _context.Users.Remove(userToDelete);
             await _context.SaveChangesAsync();
 
             return RedirectToAction("SearchUser");

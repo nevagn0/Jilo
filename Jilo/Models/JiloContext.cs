@@ -53,12 +53,10 @@ public partial class JiloContext : DbContext
 
             entity.HasOne(d => d.IdGameNavigation).WithMany()
                 .HasForeignKey(d => d.IdGame)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("adversmet_user_games_fk");
 
             entity.HasOne(d => d.IdUserNavigation).WithMany()
                 .HasForeignKey(d => d.IdUser)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("adversmet_user_user_fk");
         });
 
@@ -80,6 +78,7 @@ public partial class JiloContext : DbContext
 
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.Comms)
                 .HasForeignKey(d => d.IdUser)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("comm_user_fk");
         });
 
@@ -123,12 +122,10 @@ public partial class JiloContext : DbContext
 
             entity.HasOne(d => d.IdGameNavigation).WithMany(p => p.GamesUsers)
                 .HasForeignKey(d => d.IdGame)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("games_user_games_fk");
 
             entity.HasOne(d => d.IdUserNavigation).WithMany(p => p.GamesUsers)
                 .HasForeignKey(d => d.IdUser)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("games_user_user_fk");
         });
 

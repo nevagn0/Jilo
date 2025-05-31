@@ -145,7 +145,6 @@ D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -165,3 +164,4 @@ D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.File.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

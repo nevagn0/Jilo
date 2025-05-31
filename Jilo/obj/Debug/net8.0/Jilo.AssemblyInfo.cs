@@ -10,12 +10,12 @@
 
 using System;
 using System.Reflection;
-using Microsoft.AspNetCore.Identity.UI;
+
 /*[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]*/
 [assembly: System.Reflection.AssemblyCompanyAttribute("Jilo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2334be0db646dc60b17a41e52a8e0e8e4ba51b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff6d54320254cc2b7e735abdbd7d5bf0151dc72c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Jilo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Jilo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

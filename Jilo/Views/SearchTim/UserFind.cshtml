@@ -8,10 +8,10 @@
         <button onclick="window.history.back()" type="submit" class="userfind-back-btn">
                 <i class="fas fa-arrow-left"></i> Назад
             </button>
-        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        @if (User.Identity.Name == "ters0n")
         {
             <div class="userfind-section">
-                <form asp-controller="SearchTim" asp-action="DeleteUser" method="post">
+                <form asp-controller="SearchTim" asp-action="DeleteProfile" method="post">
                     <input type="hidden" name="userId" value="@Model.Id" />
                     <button type="submit" class="userfind-delete-btn">Удалить профиль</button>
                 </form>

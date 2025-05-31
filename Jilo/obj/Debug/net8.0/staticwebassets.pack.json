@@ -245,12 +245,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\02560029-961e-42d0-964a-9915452d61c8_colda.jpg",
+      "PackagePath": "staticwebassets\\uploads\\02560029-961e-42d0-964a-9915452d61c8_colda.jpg"
+    },
+    {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\085db39af6bdf1f0d607584bd8f105d3.jpg",
       "PackagePath": "staticwebassets\\uploads\\085db39af6bdf1f0d607584bd8f105d3.jpg"
     },
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg",
       "PackagePath": "staticwebassets\\uploads\\23cd9546-d8f5-4a4c-88af-04230397d9c1_085db39af6bdf1f0d607584bd8f105d3.jpg"
+    },
+    {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\58dd3a50-38b6-42ff-b331-e5666a68b039_навальный.jpg",
+      "PackagePath": "staticwebassets\\uploads\\58dd3a50-38b6-42ff-b331-e5666a68b039_навальный.jpg"
     },
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\60b02ed3-f229-4f3a-98a6-6543eb634ba9_deepseek_mermaid_20250505_58e1c2.png",
@@ -263,6 +271,14 @@
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\841cb1d4-e34f-49c9-99b4-7a29e1fbe6ba_deepseek_mermaid_20250505_58e1c2.png",
       "PackagePath": "staticwebassets\\uploads\\841cb1d4-e34f-49c9-99b4-7a29e1fbe6ba_deepseek_mermaid_20250505_58e1c2.png"
+    },
+    {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\8a5b5f25-17f1-4ecc-953d-9206929864a6_навальный.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8a5b5f25-17f1-4ecc-953d-9206929864a6_навальный.jpg"
+    },
+    {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\9379d831-2de2-436a-983f-ad26ef315d5c_colda.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9379d831-2de2-436a-983f-ad26ef315d5c_colda.jpg"
     },
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\RareGovnishe.jpg",
@@ -279,6 +295,10 @@
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\cs2.png",
       "PackagePath": "staticwebassets\\uploads\\cs2.png"
+    },
+    {
+      "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dbee4b35-360f-4e00-95f0-193bd46957f7_colda.jpg",
+      "PackagePath": "staticwebassets\\uploads\\dbee4b35-360f-4e00-95f0-193bd46957f7_colda.jpg"
     },
     {
       "Id": "D:\\Jilo\\Jilo\\Jilo\\wwwroot\\uploads\\dota2.jpg",

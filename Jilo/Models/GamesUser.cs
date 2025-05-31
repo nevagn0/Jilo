@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 
 namespace Jilo.Models;
 
@@ -15,8 +14,8 @@ public partial class GamesUser
     public string? TimeInGame { get; set; }
 
     public string? Role { get; set; }
-    [JsonIgnore]
+
     public virtual Game IdGameNavigation { get; set; } = null!;
-    [JsonIgnore]
+
     public virtual User IdUserNavigation { get; set; } = null!;
 }
