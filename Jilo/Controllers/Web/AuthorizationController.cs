@@ -4,6 +4,7 @@ using System.Net;
 using System.Security.Claims;
 using System.Text;
 using Jilo.Models;
+using Jilo.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -83,11 +84,5 @@ namespace Jilo.Controllers.Web
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
-}
-public class LoginDto
-{
-    [Required(ErrorMessage = "Имя пользователя обязательно")]
-    public string Username { get; set; }
-    [Required(ErrorMessage = "Пароль обязателен")]
-    public string Password { get; set; }
+
 }

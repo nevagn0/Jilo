@@ -151,3 +151,16 @@ D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\Jilo.MvcApplicationPartsAssemblyInfo.cs
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.File.dll

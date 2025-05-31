@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Jilo.Models;
+using Serilog;
 using System.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -37,6 +38,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
 
     });
+
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information() // Минимальный уровень логирования
+    .WriteTo.File(
+        path: "Logs/audit.log", // Путь к файлу логов
+        rollingInterval: RollingInterval.Day, // Новый файл каждый день
+        outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}" // Формат записи
+    )
+    .WriteTo.Console() // Дублирование в консоль (для отладки)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 builder.Services.AddSwaggerGen(c =>
 {
