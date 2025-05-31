@@ -23,7 +23,7 @@ namespace Jilo.Controllers.Api
         [HttpPost("autorization-user")]
         public async Task<IActionResult> Index([FromBody] Authorization authorization)
         {
-            if(ModelState.IsValid) 
+            if(!ModelState.IsValid) 
             {
                 return BadRequest(ModelState);
             }

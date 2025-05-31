@@ -1,0 +1,740 @@
+2025-05-24 23:09:40 [Information] Executed DbCommand ("106"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM games AS g)"
+2025-05-24 23:09:40 [Information] User profile is available. Using '"C:\Users\Shind\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-24 23:09:41 [Information] Now listening on: "https://localhost:7136"
+2025-05-24 23:09:41 [Information] Now listening on: "http://localhost:5115"
+2025-05-24 23:09:41 [Information] Application started. Press Ctrl+C to shut down.
+2025-05-24 23:09:41 [Information] Hosting environment: "Development"
+2025-05-24 23:09:41 [Information] Content root path: "D:\Jilo\Jilo\Jilo"
+2025-05-24 23:09:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/""" - null null
+2025-05-24 23:09:45 [Information] Executing endpoint '"Jilo.Controllers.Web.HomeController.Index (Jilo)"'
+2025-05-24 23:09:45 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Jilo.Controllers.Web.HomeController" ("Jilo").
+2025-05-24 23:09:45 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:09:45 [Information] Executed ViewResult - view "Index" executed in 131.7516ms.
+2025-05-24 23:09:45 [Information] Executed action "Jilo.Controllers.Web.HomeController.Index (Jilo)" in 153.2644ms
+2025-05-24 23:09:45 [Information] Executed endpoint '"Jilo.Controllers.Web.HomeController.Index (Jilo)"'
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/""" - 200 null "text/html; charset=utf-8" 1938.9986ms
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/lib/bootstrap/dist/css/bootstrap.min.css""" - null null
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/Jilo.styles.css""?v=gsnJB9Le-BF0lwWOsjnfjk3Y1pUfS_wikmfo14Zyjos" - null null
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/css/site.css""?v=GNRPq9dCsn4szcdesTTV56SvvD06nABq9eP5r_6MCrM" - null null
+2025-05-24 23:09:45 [Information] Sending file. Request path: '"/Jilo.styles.css"'. Physical path: '"D:\Jilo\Jilo\Jilo\obj\Debug\net8.0\scopedcss\bundle\Jilo.styles.css"'
+2025-05-24 23:09:45 [Information] Sending file. Request path: '"/css/site.css"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\css\site.css"'
+2025-05-24 23:09:45 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.min.css"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css"'
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/Jilo.styles.css""?v=gsnJB9Le-BF0lwWOsjnfjk3Y1pUfS_wikmfo14Zyjos" - 200 1122 "text/css" 60.2045ms
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/css/site.css""?v=GNRPq9dCsn4szcdesTTV56SvvD06nABq9eP5r_6MCrM" - 200 36347 "text/css" 61.8076ms
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/lib/bootstrap/dist/css/bootstrap.min.css""" - 200 162720 "text/css" 65.3827ms
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/lib/jquery/dist/jquery.min.js""" - null null
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/lib/bootstrap/dist/js/bootstrap.bundle.min.js""" - null null
+2025-05-24 23:09:45 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.min.js"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\lib\jquery\dist\jquery.min.js"'
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/lib/jquery/dist/jquery.min.js""" - 200 89501 "text/javascript" 28.2845ms
+2025-05-24 23:09:45 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.bundle.min.js"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js"'
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/lib/bootstrap/dist/js/bootstrap.bundle.min.js""" - 200 78468 "text/javascript" 36.8676ms
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/js/site.js""?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo" - null null
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:09:45 [Information] Sending file. Request path: '"/js/site.js"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\js\site.js"'
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/js/site.js""?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo" - 200 231 "text/javascript" 16.6598ms
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 13.0823ms
+2025-05-24 23:09:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:09:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 75.553ms
+2025-05-24 23:10:02 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/SearchTim/SearchUser""?push=z" - null null
+2025-05-24 23:10:02 [Information] Executing endpoint '"Jilo.Controllers.Web.SearchTimController.SearchUser (Jilo)"'
+2025-05-24 23:10:02 [Information] Route matched with "{action = \"SearchUser\", controller = \"SearchTim\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult SearchUser(System.String)" on controller "Jilo.Controllers.Web.SearchTimController" ("Jilo").
+2025-05-24 23:10:03 [Information] Executed DbCommand ("57"ms) [Parameters=["@__push_0_contains='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username LIKE @__push_0_contains"
+2025-05-24 23:10:03 [Information] Executing ViewResult, running view "SearchUser".
+2025-05-24 23:10:03 [Information] Executed ViewResult - view "SearchUser" executed in 22.461ms.
+2025-05-24 23:10:03 [Information] Executed action "Jilo.Controllers.Web.SearchTimController.SearchUser (Jilo)" in 399.643ms
+2025-05-24 23:10:03 [Information] Executed endpoint '"Jilo.Controllers.Web.SearchTimController.SearchUser (Jilo)"'
+2025-05-24 23:10:03 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/SearchTim/SearchUser""?push=z" - 200 null "text/html; charset=utf-8" 442.3504ms
+2025-05-24 23:10:03 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/foto.jpg""" - null null
+2025-05-24 23:10:03 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:03 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:03 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 9.4167ms
+2025-05-24 23:10:03 [Information] Sending file. Request path: '"/uploads/foto.jpg"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\uploads\foto.jpg"'
+2025-05-24 23:10:03 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/foto.jpg""" - 200 71926 "image/jpeg" 50.1272ms
+2025-05-24 23:10:03 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 54.9532ms
+2025-05-24 23:10:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/SearchTim/UserFind""?name=z" - null null
+2025-05-24 23:10:05 [Information] Executing endpoint '"Jilo.Controllers.Web.SearchTimController.UserFind (Jilo)"'
+2025-05-24 23:10:05 [Information] Route matched with "{action = \"UserFind\", controller = \"SearchTim\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult UserFind(System.String)" on controller "Jilo.Controllers.Web.SearchTimController" ("Jilo").
+2025-05-24 23:10:05 [Warning] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2025-05-24 23:10:05 [Information] Executed DbCommand ("24"ms) [Parameters=["@__name_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u0.id, u0.avatar, u0.comm, u0.data_registration, u0.discription, u0.email, u0.grade, u0.last_online, u0.passwordhash, u0.\"Role\", u0.socialcredits, u0.username, s.id_user, s.id_game, s.rank, s.role, s.time_in_game, s.id, s.avatar, s.discrip, s.name, c.id, c.comm, c.grade, c.id_user, c.targetuser
+FROM (
+    SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+    FROM \"User\" AS u
+    WHERE u.username = @__name_0
+    LIMIT 1
+) AS u0
+LEFT JOIN (
+    SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+    FROM games_user AS g
+    INNER JOIN games AS g0 ON g.id_game = g0.id
+) AS s ON u0.id = s.id_user
+LEFT JOIN comm AS c ON u0.id = c.id_user
+ORDER BY u0.id, s.id_user, s.id_game, s.id"
+2025-05-24 23:10:05 [Information] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.id, c.comm, c.grade, c.id_user, c.targetuser, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM comm AS c
+LEFT JOIN \"User\" AS u ON c.id_user = u.id
+WHERE c.targetuser = @__user_Id_0"
+2025-05-24 23:10:05 [Information] Executed DbCommand ("70"ms) [Parameters=["@__user_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT avg(c.grade)
+FROM comm AS c
+WHERE c.targetuser = @__user_Id_0"
+2025-05-24 23:10:05 [Information] Executing ViewResult, running view "UserFind".
+2025-05-24 23:10:05 [Information] Executed ViewResult - view "UserFind" executed in 58.8801ms.
+2025-05-24 23:10:05 [Information] Executed action "Jilo.Controllers.Web.SearchTimController.UserFind (Jilo)" in 653.9365ms
+2025-05-24 23:10:05 [Information] Executed endpoint '"Jilo.Controllers.Web.SearchTimController.UserFind (Jilo)"'
+2025-05-24 23:10:05 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/SearchTim/UserFind""?name=z" - 200 null "text/html; charset=utf-8" 679.3321ms
+2025-05-24 23:10:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:05 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:05 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 18.9928ms
+2025-05-24 23:10:05 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 37.2772ms
+2025-05-24 23:10:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/Registration""?returnUrl=%2FSearchTim%2FUserFind%3Fname%3Dz" - null null
+2025-05-24 23:10:15 [Information] Executing endpoint '"Jilo.Controllers.Web.RegistrationController.Index (Jilo)"'
+2025-05-24 23:10:15 [Information] Route matched with "{action = \"Index\", controller = \"Registration\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Jilo.Controllers.Web.RegistrationController" ("Jilo").
+2025-05-24 23:10:15 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:15 [Information] Executed ViewResult - view "Index" executed in 41.7028ms.
+2025-05-24 23:10:15 [Information] Executed action "Jilo.Controllers.Web.RegistrationController.Index (Jilo)" in 48.2792ms
+2025-05-24 23:10:15 [Information] Executed endpoint '"Jilo.Controllers.Web.RegistrationController.Index (Jilo)"'
+2025-05-24 23:10:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/Registration""?returnUrl=%2FSearchTim%2FUserFind%3Fname%3Dz" - 200 null "text/html; charset=utf-8" 68.7422ms
+2025-05-24 23:10:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 9.2426ms
+2025-05-24 23:10:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 28.238ms
+2025-05-24 23:10:18 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/RegistrationBack""" - "application/x-www-form-urlencoded" 221
+2025-05-24 23:10:18 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.RegistrationBack (Jilo)"'
+2025-05-24 23:10:18 [Information] Route matched with "{action = \"RegistrationBack\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult RegistrationBack()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:10:18 [Information] Executing RedirectResult, redirecting to "/".
+2025-05-24 23:10:18 [Information] Executed action "Jilo.Controllers.Web.BackController.RegistrationBack (Jilo)" in 2.9937ms
+2025-05-24 23:10:18 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.RegistrationBack (Jilo)"'
+2025-05-24 23:10:18 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/RegistrationBack""" - 302 0 null 18.6213ms
+2025-05-24 23:10:18 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/""" - null null
+2025-05-24 23:10:18 [Information] Executing endpoint '"Jilo.Controllers.Web.HomeController.Index (Jilo)"'
+2025-05-24 23:10:18 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Jilo.Controllers.Web.HomeController" ("Jilo").
+2025-05-24 23:10:18 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:18 [Information] Executed ViewResult - view "Index" executed in 2.6585ms.
+2025-05-24 23:10:18 [Information] Executed action "Jilo.Controllers.Web.HomeController.Index (Jilo)" in 4.8889ms
+2025-05-24 23:10:18 [Information] Executed endpoint '"Jilo.Controllers.Web.HomeController.Index (Jilo)"'
+2025-05-24 23:10:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/""" - 200 null "text/html; charset=utf-8" 16.3972ms
+2025-05-24 23:10:18 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:18 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 5.863ms
+2025-05-24 23:10:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 22.3382ms
+2025-05-24 23:10:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/Authorization""" - null null
+2025-05-24 23:10:19 [Information] Executing endpoint '"Jilo.Controllers.Web.AuthorizationController.Index (Jilo)"'
+2025-05-24 23:10:19 [Information] Route matched with "{action = \"Index\", controller = \"Authorization\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Jilo.Controllers.Web.AuthorizationController" ("Jilo").
+2025-05-24 23:10:19 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:19 [Information] Executed ViewResult - view "Index" executed in 19.0179ms.
+2025-05-24 23:10:19 [Information] Executed action "Jilo.Controllers.Web.AuthorizationController.Index (Jilo)" in 22.8592ms
+2025-05-24 23:10:19 [Information] Executed endpoint '"Jilo.Controllers.Web.AuthorizationController.Index (Jilo)"'
+2025-05-24 23:10:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/Authorization""" - 200 null "text/html; charset=utf-8" 42.4079ms
+2025-05-24 23:10:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/lib/jquery-validation/dist/jquery.validate.min.js""" - null null
+2025-05-24 23:10:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js""" - null null
+2025-05-24 23:10:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:19 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:19 [Information] Sending file. Request path: '"/lib/jquery-validation/dist/jquery.validate.min.js"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js"'
+2025-05-24 23:10:19 [Information] Sending file. Request path: '"/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js"'
+2025-05-24 23:10:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 10.8829ms
+2025-05-24 23:10:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/lib/jquery-validation/dist/jquery.validate.min.js""" - 200 24601 "text/javascript" 18.9641ms
+2025-05-24 23:10:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js""" - 200 5824 "text/javascript" 22.7956ms
+2025-05-24 23:10:19 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 35.6754ms
+2025-05-24 23:10:32 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Authorization/Authorization""" - "application/x-www-form-urlencoded" 217
+2025-05-24 23:10:32 [Information] Executing endpoint '"Jilo.Controllers.Web.AuthorizationController.Authorization (Jilo)"'
+2025-05-24 23:10:32 [Information] Route matched with "{action = \"Authorization\", controller = \"Authorization\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authorization(Jilo.Dto.LoginDto)" on controller "Jilo.Controllers.Web.AuthorizationController" ("Jilo").
+2025-05-24 23:10:32 [Information] Executed DbCommand ("8"ms) [Parameters=["@__loginDto_Username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__loginDto_Username_0
+LIMIT 1"
+2025-05-24 23:10:32 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:10:32 [Information] Executed action "Jilo.Controllers.Web.AuthorizationController.Authorization (Jilo)" in 486.5481ms
+2025-05-24 23:10:32 [Information] Executed endpoint '"Jilo.Controllers.Web.AuthorizationController.Authorization (Jilo)"'
+2025-05-24 23:10:32 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Authorization/Authorization""" - 302 0 null 509.8113ms
+2025-05-24 23:10:32 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:10:32 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:32 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:10:32 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:33 [Information] Executed DbCommand ("125"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:10:33 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:33 [Information] Executed ViewResult - view "Index" executed in 11.8411ms.
+2025-05-24 23:10:33 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 241.6741ms
+2025-05-24 23:10:33 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:33 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 299.4961ms
+2025-05-24 23:10:33 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:33 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:33 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 6.8553ms
+2025-05-24 23:10:33 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 79.2734ms
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/AddGames/AddGame""" - null null
+2025-05-24 23:10:38 [Information] Executing endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:38 [Information] Route matched with "{action = \"AddGame\", controller = \"AddGames\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGame()" on controller "AddGamesController" ("Jilo").
+2025-05-24 23:10:38 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id, g.avatar, g.discrip, g.name
+FROM games AS g"
+2025-05-24 23:10:38 [Information] Executing ViewResult, running view "AddGame".
+2025-05-24 23:10:38 [Information] Executed ViewResult - view "AddGame" executed in 17.4593ms.
+2025-05-24 23:10:38 [Information] Executed action "AddGamesController.AddGame (Jilo)" in 51.048ms
+2025-05-24 23:10:38 [Information] Executed endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/AddGames/AddGame""" - 200 null "text/html; charset=utf-8" 73.1282ms
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/dota2.jpg""" - null null
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/cs2.png""" - null null
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/RareGovnishe.jpg""" - null null
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/govnishe.jpg""" - null null
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:38 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:38 [Information] Sending file. Request path: '"/uploads/cs2.png"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\uploads\cs2.png"'
+2025-05-24 23:10:38 [Information] Sending file. Request path: '"/uploads/RareGovnishe.jpg"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\uploads\RareGovnishe.jpg"'
+2025-05-24 23:10:38 [Information] Sending file. Request path: '"/uploads/dota2.jpg"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\uploads\dota2.jpg"'
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/RareGovnishe.jpg""" - 200 64271 "image/jpeg" 38.0035ms
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 37.7048ms
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/cs2.png""" - 200 70416 "image/png" 46.7958ms
+2025-05-24 23:10:38 [Information] Sending file. Request path: '"/uploads/govnishe.jpg"'. Physical path: '"D:\Jilo\Jilo\Jilo\wwwroot\uploads\govnishe.jpg"'
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/dota2.jpg""" - 200 219177 "image/jpeg" 73.7004ms
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/uploads/govnishe.jpg""" - 200 41299 "image/jpeg" 68.9246ms
+2025-05-24 23:10:38 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 69.0541ms
+2025-05-24 23:10:42 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:10:42 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:10:42 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:10:42 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:10:42 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.8099ms
+2025-05-24 23:10:42 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:10:42 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - 302 0 null 20.6364ms
+2025-05-24 23:10:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:10:42 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:42 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:10:42 [Information] Executed DbCommand ("2"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:42 [Information] Executed DbCommand ("2"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:10:42 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:42 [Information] Executed ViewResult - view "Index" executed in 3.2352ms.
+2025-05-24 23:10:42 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 21.496ms
+2025-05-24 23:10:42 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 37.7571ms
+2025-05-24 23:10:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:42 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 9.7743ms
+2025-05-24 23:10:42 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 29.3603ms
+2025-05-24 23:10:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - null null
+2025-05-24 23:10:43 [Information] Executing endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:10:43 [Information] Route matched with "{action = \"Profile\", controller = \"ProfileUser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Profile(Int32)" on controller "Jilo.Controllers.Web.ProfileUserController" ("Jilo").
+2025-05-24 23:10:43 [Information] Executed DbCommand ("0"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:43 [Information] Executed DbCommand ("62"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM games_user AS g
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:10:43 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+FROM games_user AS g
+INNER JOIN games AS g0 ON g.id_game = g0.id
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:10:43 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.id, c.comm, c.grade, c.id_user, c.targetuser, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM comm AS c
+LEFT JOIN \"User\" AS u ON c.id_user = u.id
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:10:43 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT avg(c.grade)
+FROM comm AS c
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:10:43 [Information] Executing ViewResult, running view "Profile".
+2025-05-24 23:10:43 [Information] Executed ViewResult - view "Profile" executed in 24.1538ms.
+2025-05-24 23:10:43 [Information] Executed action "Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)" in 172.8073ms
+2025-05-24 23:10:43 [Information] Executed endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:10:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - 200 null "text/html; charset=utf-8" 194.5895ms
+2025-05-24 23:10:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:43 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 30.2919ms
+2025-05-24 23:10:43 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 29.0486ms
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:10:45 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:10:45 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:10:45 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:10:45 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.5961ms
+2025-05-24 23:10:45 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - 302 0 null 20.4688ms
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:10:45 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:45 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:10:45 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:45 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:10:45 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:45 [Information] Executed ViewResult - view "Index" executed in 3.162ms.
+2025-05-24 23:10:45 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 16.7201ms
+2025-05-24 23:10:45 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 34.5125ms
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 8.6119ms
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 30.4221ms
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/AddGames/AddGame""" - null null
+2025-05-24 23:10:45 [Information] Executing endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:45 [Information] Route matched with "{action = \"AddGame\", controller = \"AddGames\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGame()" on controller "AddGamesController" ("Jilo").
+2025-05-24 23:10:45 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id, g.avatar, g.discrip, g.name
+FROM games AS g"
+2025-05-24 23:10:45 [Information] Executing ViewResult, running view "AddGame".
+2025-05-24 23:10:45 [Information] Executed ViewResult - view "AddGame" executed in 3.0307ms.
+2025-05-24 23:10:45 [Information] Executed action "AddGamesController.AddGame (Jilo)" in 9.9312ms
+2025-05-24 23:10:45 [Information] Executed endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/AddGames/AddGame""" - 200 null "text/html; charset=utf-8" 30.411ms
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:45 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 13.5091ms
+2025-05-24 23:10:45 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 17.1522ms
+2025-05-24 23:10:48 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/AddGames/AddGame""" - "application/x-www-form-urlencoded" 366
+2025-05-24 23:10:48 [Information] Executing endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:48 [Information] Route matched with "{action = \"AddGame\", controller = \"AddGames\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddGame(Int32, System.String, System.String, System.String)" on controller "AddGamesController" ("Jilo").
+2025-05-24 23:10:48 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Parse_0='?' (DbType = Int32), @__gameId_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM games_user AS g
+    WHERE g.id_user = @__Parse_0 AND g.id_game = @__gameId_1)"
+2025-05-24 23:10:48 [Information] Start processing HTTP request "POST" "https://localhost:7136/api/games/add-to-user"
+2025-05-24 23:10:48 [Information] Sending HTTP request "POST" "https://localhost:7136/api/games/add-to-user"
+2025-05-24 23:10:48 [Information] Request starting "HTTP/1.1" "POST" "https"://"localhost:7136""""/api/games/add-to-user""" - "application/json; charset=utf-8" null
+2025-05-24 23:10:48 [Information] Executing endpoint '"AddGamesApiController.AddGameToUser (Jilo)"'
+2025-05-24 23:10:48 [Information] Route matched with "{action = \"AddGameToUser\", controller = \"AddGamesApi\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddGameToUser(Jilo.Dto.AddGameToUserRequest, Microsoft.Extensions.Logging.ILogger`1[AddGamesApiController])" on controller "AddGamesApiController" ("Jilo").
+2025-05-24 23:10:48 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM \"User\" AS u
+    WHERE u.id = @__userId_0)"
+2025-05-24 23:10:48 [Information] Executed DbCommand ("1"ms) [Parameters=["@__request_GameId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT EXISTS (
+    SELECT 1
+    FROM games AS g
+    WHERE g.id = @__request_GameId_0)"
+2025-05-24 23:10:48 [Information] Executed DbCommand ("159"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO games_user (id_game, id_user, rank, role, time_in_game)
+VALUES (@p0, @p1, @p2, @p3, @p4);"
+2025-05-24 23:10:49 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType1`1[[System.Boolean, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2025-05-24 23:10:49 [Information] Executed action "AddGamesApiController.AddGameToUser (Jilo)" in 263.2747ms
+2025-05-24 23:10:49 [Information] Executed endpoint '"AddGamesApiController.AddGameToUser (Jilo)"'
+2025-05-24 23:10:49 [Information] Received HTTP response headers after 309.6957ms - 200
+2025-05-24 23:10:49 [Information] Request finished "HTTP/1.1" "POST" "https"://"localhost:7136""""/api/games/add-to-user""" - 200 null "application/json; charset=utf-8" 289.3086ms
+2025-05-24 23:10:49 [Information] End processing HTTP request after 332.5668ms - 200
+2025-05-24 23:10:49 [Information] Executing RedirectResult, redirecting to "/AddGames/AddGame".
+2025-05-24 23:10:49 [Information] Executed action "AddGamesController.AddGame (Jilo)" in 406.7135ms
+2025-05-24 23:10:49 [Information] Executed endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:49 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/AddGames/AddGame""" - 302 0 null 430.7854ms
+2025-05-24 23:10:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/AddGames/AddGame""" - null null
+2025-05-24 23:10:49 [Information] Executing endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:49 [Information] Route matched with "{action = \"AddGame\", controller = \"AddGames\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGame()" on controller "AddGamesController" ("Jilo").
+2025-05-24 23:10:49 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id, g.avatar, g.discrip, g.name
+FROM games AS g"
+2025-05-24 23:10:49 [Information] Executing ViewResult, running view "AddGame".
+2025-05-24 23:10:49 [Information] Executed ViewResult - view "AddGame" executed in 11.686ms.
+2025-05-24 23:10:49 [Information] Executed action "AddGamesController.AddGame (Jilo)" in 24.3353ms
+2025-05-24 23:10:49 [Information] Executed endpoint '"AddGamesController.AddGame (Jilo)"'
+2025-05-24 23:10:49 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/AddGames/AddGame""" - 200 null "text/html; charset=utf-8" 48.2039ms
+2025-05-24 23:10:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:49 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:49 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 13.8485ms
+2025-05-24 23:10:49 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 18.8686ms
+2025-05-24 23:10:50 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:10:50 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:10:50 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:10:50 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:10:50 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.6279ms
+2025-05-24 23:10:50 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:10:50 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - 302 0 null 17.9592ms
+2025-05-24 23:10:50 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:10:50 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:50 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:10:50 [Information] Executed DbCommand ("3"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:50 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:10:50 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:10:50 [Information] Executed ViewResult - view "Index" executed in 2.7602ms.
+2025-05-24 23:10:50 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 38.8851ms
+2025-05-24 23:10:50 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:10:50 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 51.7555ms
+2025-05-24 23:10:50 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:50 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:50 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 20.7531ms
+2025-05-24 23:10:51 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 48.6085ms
+2025-05-24 23:10:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - null null
+2025-05-24 23:10:51 [Information] Executing endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:10:51 [Information] Route matched with "{action = \"Profile\", controller = \"ProfileUser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Profile(Int32)" on controller "Jilo.Controllers.Web.ProfileUserController" ("Jilo").
+2025-05-24 23:10:51 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:51 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM games_user AS g
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:10:51 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+FROM games_user AS g
+INNER JOIN games AS g0 ON g.id_game = g0.id
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:10:51 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.id, c.comm, c.grade, c.id_user, c.targetuser, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM comm AS c
+LEFT JOIN \"User\" AS u ON c.id_user = u.id
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:10:51 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT avg(c.grade)
+FROM comm AS c
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:10:51 [Information] Executing ViewResult, running view "Profile".
+2025-05-24 23:10:51 [Information] Executed ViewResult - view "Profile" executed in 6.848ms.
+2025-05-24 23:10:51 [Information] Executed action "Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)" in 46.6841ms
+2025-05-24 23:10:51 [Information] Executed endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:10:51 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - 200 null "text/html; charset=utf-8" 62.9373ms
+2025-05-24 23:10:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:51 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:51 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 14.1217ms
+2025-05-24 23:10:51 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 26.1057ms
+2025-05-24 23:10:53 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/UpdateOrDelete""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:10:53 [Information] Executing endpoint '"Jilo.Controllers.Web.UpdateOrDeleteController.UpOrDel (Jilo)"'
+2025-05-24 23:10:53 [Information] Route matched with "{action = \"UpOrDel\", controller = \"UpdateOrDelete\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult UpOrDel()" on controller "Jilo.Controllers.Web.UpdateOrDeleteController" ("Jilo").
+2025-05-24 23:10:53 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Parse_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+FROM games_user AS g
+INNER JOIN games AS g0 ON g.id_game = g0.id
+WHERE g.id_user = @__Parse_0"
+2025-05-24 23:10:53 [Information] Executing ViewResult, running view "UpOrDel".
+2025-05-24 23:10:53 [Information] Executed ViewResult - view "UpOrDel" executed in 6.0658ms.
+2025-05-24 23:10:53 [Information] Executed action "Jilo.Controllers.Web.UpdateOrDeleteController.UpOrDel (Jilo)" in 22.421ms
+2025-05-24 23:10:53 [Information] Executed endpoint '"Jilo.Controllers.Web.UpdateOrDeleteController.UpOrDel (Jilo)"'
+2025-05-24 23:10:53 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/UpdateOrDelete""" - 200 null "text/html; charset=utf-8" 40.7592ms
+2025-05-24 23:10:53 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:10:53 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:53 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 15.1608ms
+2025-05-24 23:10:53 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 17.8772ms
+2025-05-24 23:10:54 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - null null
+2025-05-24 23:10:54 [Information] Executing endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:10:54 [Information] Route matched with "{action = \"Profile\", controller = \"ProfileUser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Profile(Int32)" on controller "Jilo.Controllers.Web.ProfileUserController" ("Jilo").
+2025-05-24 23:10:54 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:10:54 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM games_user AS g
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:10:54 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+FROM games_user AS g
+INNER JOIN games AS g0 ON g.id_game = g0.id
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:10:54 [Information] Executed DbCommand ("0"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.id, c.comm, c.grade, c.id_user, c.targetuser, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM comm AS c
+LEFT JOIN \"User\" AS u ON c.id_user = u.id
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:10:54 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT avg(c.grade)
+FROM comm AS c
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:10:54 [Information] Executing ViewResult, running view "Profile".
+2025-05-24 23:10:54 [Information] Executed ViewResult - view "Profile" executed in 2.5638ms.
+2025-05-24 23:10:55 [Information] Executed action "Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)" in 25.5629ms
+2025-05-24 23:10:55 [Information] Executed endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:10:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - 200 null "text/html; charset=utf-8" 39.9868ms
+2025-05-24 23:10:55 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:10:55 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 26.5038ms
+2025-05-24 23:11:06 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/ProfileUser/UserDiscription""" - "application/x-www-form-urlencoded" 301
+2025-05-24 23:11:06 [Information] Executing endpoint '"Jilo.Controllers.Web.ProfileUserController.UserDiscription (Jilo)"'
+2025-05-24 23:11:06 [Information] Route matched with "{action = \"UserDiscription\", controller = \"ProfileUser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UserDiscription(System.String)" on controller "Jilo.Controllers.Web.ProfileUserController" ("Jilo").
+2025-05-24 23:11:06 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:06 [Information] Executed DbCommand ("2"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?'"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET discription = @p0
+WHERE id = @p1;"
+2025-05-24 23:11:06 [Information] Executing RedirectResult, redirecting to "/ProfileUser/Profile".
+2025-05-24 23:11:06 [Information] Executed action "Jilo.Controllers.Web.ProfileUserController.UserDiscription (Jilo)" in 19.5092ms
+2025-05-24 23:11:06 [Information] Executed endpoint '"Jilo.Controllers.Web.ProfileUserController.UserDiscription (Jilo)"'
+2025-05-24 23:11:06 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/ProfileUser/UserDiscription""" - 302 0 null 43.4725ms
+2025-05-24 23:11:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - null null
+2025-05-24 23:11:06 [Information] Executing endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:11:06 [Information] Route matched with "{action = \"Profile\", controller = \"ProfileUser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Profile(Int32)" on controller "Jilo.Controllers.Web.ProfileUserController" ("Jilo").
+2025-05-24 23:11:06 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:06 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM games_user AS g
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:11:06 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+FROM games_user AS g
+INNER JOIN games AS g0 ON g.id_game = g0.id
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:11:06 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.id, c.comm, c.grade, c.id_user, c.targetuser, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM comm AS c
+LEFT JOIN \"User\" AS u ON c.id_user = u.id
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:11:06 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT avg(c.grade)
+FROM comm AS c
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:11:06 [Information] Executing ViewResult, running view "Profile".
+2025-05-24 23:11:06 [Information] Executed ViewResult - view "Profile" executed in 2.6858ms.
+2025-05-24 23:11:06 [Information] Executed action "Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)" in 30.4125ms
+2025-05-24 23:11:06 [Information] Executed endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:11:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - 200 null "text/html; charset=utf-8" 44.1857ms
+2025-05-24 23:11:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:06 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 24.7669ms
+2025-05-24 23:11:06 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 24.3455ms
+2025-05-24 23:11:09 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:11:09 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:09 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:11:09 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:11:09 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.7729ms
+2025-05-24 23:11:09 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:09 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - 302 0 null 19.3307ms
+2025-05-24 23:11:09 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:11:09 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:09 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:11:09 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:09 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:11:09 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:11:09 [Information] Executed ViewResult - view "Index" executed in 2.7398ms.
+2025-05-24 23:11:09 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 15.2286ms
+2025-05-24 23:11:09 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:09 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 52.5228ms
+2025-05-24 23:11:09 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:09 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:09 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 5.8695ms
+2025-05-24 23:11:09 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 25.4174ms
+2025-05-24 23:11:10 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/ViewAdversment/ViewAdverstment""" - null null
+2025-05-24 23:11:10 [Information] Executing endpoint '"Jilo.Controllers.ViewAdversmentController.ViewAdverstment (Jilo)"'
+2025-05-24 23:11:10 [Information] Route matched with "{action = \"ViewAdverstment\", controller = \"ViewAdversment\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ViewAdverstment()" on controller "Jilo.Controllers.ViewAdversmentController" ("Jilo").
+2025-05-24 23:11:10 [Information] Executed DbCommand ("106"ms) [Parameters=["@__currentUserId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT a.id_user, a.id_game, a.date_create, a.discription, a.id_second_user, a.name_second_user, g.id, g.avatar, g.discrip, g.name, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM adversmet_user AS a
+INNER JOIN games AS g ON a.id_game = g.id
+INNER JOIN \"User\" AS u ON a.id_user = u.id
+WHERE a.id_user <> @__currentUserId_0"
+2025-05-24 23:11:10 [Information] Executing ViewResult, running view "ViewAdverstment".
+2025-05-24 23:11:10 [Information] Executed ViewResult - view "ViewAdverstment" executed in 6.6598ms.
+2025-05-24 23:11:10 [Information] Executed action "Jilo.Controllers.ViewAdversmentController.ViewAdverstment (Jilo)" in 134.8975ms
+2025-05-24 23:11:10 [Information] Executed endpoint '"Jilo.Controllers.ViewAdversmentController.ViewAdverstment (Jilo)"'
+2025-05-24 23:11:10 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/ViewAdversment/ViewAdverstment""" - 200 null "text/html; charset=utf-8" 155.3213ms
+2025-05-24 23:11:10 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:10 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:10 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 15.65ms
+2025-05-24 23:11:10 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 21.7855ms
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/Back/AddGames""?" - null null
+2025-05-24 23:11:11 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:11 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:11:11 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:11:11 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.2226ms
+2025-05-24 23:11:11 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/Back/AddGames""?" - 302 0 null 14.7004ms
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:11:11 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:11 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:11:11 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:11 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:11:11 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:11:11 [Information] Executed ViewResult - view "Index" executed in 2.981ms.
+2025-05-24 23:11:11 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 15.2101ms
+2025-05-24 23:11:11 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 31.2998ms
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 8.4349ms
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 23.1915ms
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/AddAdversmet/Create""" - null null
+2025-05-24 23:11:11 [Information] Executing endpoint '"Jilo.Controllers.Web.AddAdversmetController.Create (Jilo)"'
+2025-05-24 23:11:11 [Information] Route matched with "{action = \"Create\", controller = \"AddAdversmet\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Create()" on controller "Jilo.Controllers.Web.AddAdversmetController" ("Jilo").
+2025-05-24 23:11:11 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id, g.avatar, g.discrip, g.name
+FROM games AS g"
+2025-05-24 23:11:11 [Information] Executing ViewResult, running view "Create".
+2025-05-24 23:11:11 [Information] Executed ViewResult - view "Create" executed in 14.8554ms.
+2025-05-24 23:11:11 [Information] Executed action "Jilo.Controllers.Web.AddAdversmetController.Create (Jilo)" in 25.99ms
+2025-05-24 23:11:11 [Information] Executed endpoint '"Jilo.Controllers.Web.AddAdversmetController.Create (Jilo)"'
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/AddAdversmet/Create""" - 200 null "text/html; charset=utf-8" 48.5894ms
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:11 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 11.5691ms
+2025-05-24 23:11:11 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 19.9002ms
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:11:13 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:13 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:11:13 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:11:13 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.5384ms
+2025-05-24 23:11:13 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - 302 0 null 16.8966ms
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:11:13 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:13 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:11:13 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:13 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:11:13 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:11:13 [Information] Executed ViewResult - view "Index" executed in 4.364ms.
+2025-05-24 23:11:13 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 18.5229ms
+2025-05-24 23:11:13 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 32.7106ms
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 6.1273ms
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 36.731ms
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/SearchTim/SearchUser""" - null null
+2025-05-24 23:11:13 [Information] Executing endpoint '"Jilo.Controllers.Web.SearchTimController.SearchUser (Jilo)"'
+2025-05-24 23:11:13 [Information] Route matched with "{action = \"SearchUser\", controller = \"SearchTim\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult SearchUser(System.String)" on controller "Jilo.Controllers.Web.SearchTimController" ("Jilo").
+2025-05-24 23:11:13 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username <> @__username_0"
+2025-05-24 23:11:13 [Information] Executing ViewResult, running view "SearchUser".
+2025-05-24 23:11:13 [Information] Executed ViewResult - view "SearchUser" executed in 3.0377ms.
+2025-05-24 23:11:13 [Information] Executed action "Jilo.Controllers.Web.SearchTimController.SearchUser (Jilo)" in 14.9519ms
+2025-05-24 23:11:13 [Information] Executed endpoint '"Jilo.Controllers.Web.SearchTimController.SearchUser (Jilo)"'
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/SearchTim/SearchUser""" - 200 null "text/html; charset=utf-8" 32.3022ms
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:13 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 10.1209ms
+2025-05-24 23:11:13 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 15.8486ms
+2025-05-24 23:11:15 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:11:15 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:15 [Information] Route matched with "{action = \"AddGames\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult AddGames()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:11:15 [Information] Executing RedirectResult, redirecting to "/MainPage".
+2025-05-24 23:11:15 [Information] Executed action "Jilo.Controllers.Web.BackController.AddGames (Jilo)" in 1.2384ms
+2025-05-24 23:11:15 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.AddGames (Jilo)"'
+2025-05-24 23:11:15 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/AddGames""" - 302 0 null 15.4979ms
+2025-05-24 23:11:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - null null
+2025-05-24 23:11:15 [Information] Executing endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:15 [Information] Route matched with "{action = \"Index\", controller = \"MainPage\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index()" on controller "Jilo.Controllers.Web.MainPageController" ("Jilo").
+2025-05-24 23:11:15 [Information] Executed DbCommand ("1"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:15 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:11:15 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:11:15 [Information] Executed ViewResult - view "Index" executed in 2.2867ms.
+2025-05-24 23:11:15 [Information] Executed action "Jilo.Controllers.Web.MainPageController.Index (Jilo)" in 18.1454ms
+2025-05-24 23:11:15 [Information] Executed endpoint '"Jilo.Controllers.Web.MainPageController.Index (Jilo)"'
+2025-05-24 23:11:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/MainPage""" - 200 null "text/html; charset=utf-8" 40.447ms
+2025-05-24 23:11:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:15 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 15.9974ms
+2025-05-24 23:11:15 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 21.4882ms
+2025-05-24 23:11:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - null null
+2025-05-24 23:11:16 [Information] Executing endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:11:16 [Information] Route matched with "{action = \"Profile\", controller = \"ProfileUser\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Profile(Int32)" on controller "Jilo.Controllers.Web.ProfileUserController" ("Jilo").
+2025-05-24 23:11:16 [Information] Executed DbCommand ("0"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:16 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT count(*)::int
+FROM games_user AS g
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:11:16 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT g.id_user, g.id_game, g.rank, g.role, g.time_in_game, g0.id, g0.avatar, g0.discrip, g0.name
+FROM games_user AS g
+INNER JOIN games AS g0 ON g.id_game = g0.id
+WHERE g.id_user = @__userr_Id_0"
+2025-05-24 23:11:16 [Information] Executed DbCommand ("0"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT c.id, c.comm, c.grade, c.id_user, c.targetuser, u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM comm AS c
+LEFT JOIN \"User\" AS u ON c.id_user = u.id
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:11:16 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userr_Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT avg(c.grade)
+FROM comm AS c
+WHERE c.targetuser = @__userr_Id_0"
+2025-05-24 23:11:16 [Information] Executing ViewResult, running view "Profile".
+2025-05-24 23:11:16 [Information] Executed ViewResult - view "Profile" executed in 3.5649ms.
+2025-05-24 23:11:16 [Information] Executed action "Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)" in 30.2589ms
+2025-05-24 23:11:16 [Information] Executed endpoint '"Jilo.Controllers.Web.ProfileUserController.Profile (Jilo)"'
+2025-05-24 23:11:16 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/ProfileUser/Profile""" - 200 null "text/html; charset=utf-8" 47.2146ms
+2025-05-24 23:11:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:16 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:16 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 15.5084ms
+2025-05-24 23:11:16 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 29.4046ms
+2025-05-24 23:11:18 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:7136""""/Back/Exit""" - "application/x-www-form-urlencoded" 225
+2025-05-24 23:11:18 [Information] Executing endpoint '"Jilo.Controllers.Web.BackController.Exit (Jilo)"'
+2025-05-24 23:11:18 [Information] Route matched with "{action = \"Exit\", controller = \"Back\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Exit()" on controller "Jilo.Controllers.Web.BackController" ("Jilo").
+2025-05-24 23:11:18 [Information] Executed DbCommand ("0"ms) [Parameters=["@__username_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.avatar, u.comm, u.data_registration, u.discription, u.email, u.grade, u.last_online, u.passwordhash, u.\"Role\", u.socialcredits, u.username
+FROM \"User\" AS u
+WHERE u.username = @__username_0
+LIMIT 1"
+2025-05-24 23:11:18 [Information] Executed DbCommand ("1"ms) [Parameters=["@p1='?' (DbType = Int32), @p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE \"User\" SET last_online = @p0
+WHERE id = @p1;"
+2025-05-24 23:11:18 [Information] Executing RedirectResult, redirecting to "/".
+2025-05-24 23:11:18 [Information] Executed action "Jilo.Controllers.Web.BackController.Exit (Jilo)" in 18.6584ms
+2025-05-24 23:11:18 [Information] Executed endpoint '"Jilo.Controllers.Web.BackController.Exit (Jilo)"'
+2025-05-24 23:11:18 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:7136""""/Back/Exit""" - 302 0 null 35.485ms
+2025-05-24 23:11:18 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/""" - null null
+2025-05-24 23:11:18 [Information] Executing endpoint '"Jilo.Controllers.Web.HomeController.Index (Jilo)"'
+2025-05-24 23:11:18 [Information] Route matched with "{action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "Jilo.Controllers.Web.HomeController" ("Jilo").
+2025-05-24 23:11:18 [Information] Executing ViewResult, running view "Index".
+2025-05-24 23:11:18 [Information] Executed ViewResult - view "Index" executed in 2.4212ms.
+2025-05-24 23:11:18 [Information] Executed action "Jilo.Controllers.Web.HomeController.Index (Jilo)" in 4.8243ms
+2025-05-24 23:11:18 [Information] Executed endpoint '"Jilo.Controllers.Web.HomeController.Index (Jilo)"'
+2025-05-24 23:11:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/""" - 200 null "text/html; charset=utf-8" 16.529ms
+2025-05-24 23:11:18 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2025-05-24 23:11:18 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - null null
+2025-05-24 23:11:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_framework/aspnetcore-browser-refresh.js""" - 200 13760 "application/javascript; charset=utf-8" 7.9523ms
+2025-05-24 23:11:18 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:7136""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 23.6752ms

@@ -164,3 +164,4 @@ D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Jilo\Jilo\Jilo\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

@@ -8,7 +8,15 @@
         <button onclick="window.history.back()" type="submit" class="userfind-back-btn">
                 <i class="fas fa-arrow-left"></i> Назад
             </button>
-
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+            <div class="userfind-section">
+                <form asp-controller="SearchTim" asp-action="DeleteUser" method="post">
+                    <input type="hidden" name="userId" value="@Model.Id" />
+                    <button type="submit" class="userfind-delete-btn">Удалить профиль</button>
+                </form>
+            </div>
+        }
         <div class="userfind-header">
             <img src="@Model.Avatar" class="userfind-avatar">
             <div class="userfind-info">
@@ -111,3 +119,16 @@
     }
     });
 </script>
+<style>
+    .userfind-delete-btn {
+        background-color: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .userfind-delete-btn:hover {
+        background-color: #ff1a1a;
+    }
+</style>

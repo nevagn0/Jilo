@@ -50,7 +50,7 @@ namespace Jilo.Controllers.Api
                 }
                 Avatar = $"/uploads/{uniqueFileName}";
             }
-
+            Console.WriteLine($"AvatarFile received: {registration.AvatarFile != null}");
             var user = new User
             {
                 Username = registration.Username,

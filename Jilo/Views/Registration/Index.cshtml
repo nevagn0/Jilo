@@ -1,8 +1,7 @@
-﻿@model RegisterViewModel
+﻿@model Jilo.Dto.Registration
 @{
     ViewData["Title"] = "Registration";
 }
-<form asp-action="Index">
 <div class="registration-page">
     <div class="registration-container">
         <button asp-controller="Back" asp-action="RegistrationBack" class="back-btn">
@@ -39,7 +38,7 @@
                 <label for="avatarFile" class="file-input-label">
                     <i class="fas fa-cloud-upload-alt"></i> Выберите изображение
                 </label>
-                <input asp-for="AvatarFile" id="avatarFile" type="file" class="file-input" name="avatarFile" accept="image/*">
+                    <input asp-for="AvatarFile" id="avatarFile" type="file" class="file-input" name="AvatarFile" accept="image/*">
             </div>
 
             <button type="submit" class="btn-register">Зарегистрироваться</button>
@@ -51,7 +50,6 @@
         </div>
     </div>
 </div>
-</form>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <script>

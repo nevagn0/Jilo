@@ -2,6 +2,8 @@
 using BCrypt.Net;
 using Jilo.Models;
 using System.ComponentModel.DataAnnotations;
+using System.Net.Http.Headers;
+using Jilo.Dto;
 namespace Jilo.Controllers.Web
 {
     [Route("Registration")]
@@ -38,7 +40,7 @@ namespace Jilo.Controllers.Web
             return Json(true);
         }
         [HttpPost]
-        public async Task<IActionResult> Index(RegisterViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Index(Registration model, string returnUrl = null)
         {
             if (!ModelState.IsValid)
             {
@@ -55,7 +57,9 @@ namespace Jilo.Controllers.Web
 
                 if (model.AvatarFile != null && model.AvatarFile.Length > 0)
                 {
+                    Console.WriteLine($"ФАААААААААААААААААААААААЙЛ: {model.AvatarFile.FileName}");
                     var fileContent = new StreamContent(model.AvatarFile.OpenReadStream());
+                    fileContent.Headers.ContentType = MediaTypeHeaderValue.Parse(model.AvatarFile.ContentType);
                     content.Add(fileContent, "AvatarFile", model.AvatarFile.FileName);
                 }
                 client.BaseAddress = new Uri("https://localhost:7136");

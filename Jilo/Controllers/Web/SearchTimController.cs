@@ -1,4 +1,5 @@
 ﻿using Jilo.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
@@ -96,6 +97,20 @@ namespace Jilo.Controllers.Web
 
             return RedirectToAction("SearchUser");
         }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> DeleteProfile(int userId)
+        {
+            var username = await _context.Users.FindAsync(userId);
+            if (username == null)
+            {
+                return NotFound();
+            }
 
+            _context.Remove(username);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("SearchUser");
+        }
     }
 }
