@@ -16,8 +16,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<JiloContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {

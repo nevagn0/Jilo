@@ -15,83 +15,85 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
 build_property.RootNamespace = Jilo
 build_property.RootNamespace = Jilo
-build_property.ProjectDir = D:\Jilo\Jilo\
+build_property.ProjectDir = D:\Projects\CSharpDesktop\JiloReadyTwo\Jilo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Jilo\Jilo
+build_property.MSBuildProjectDirectory = D:\Projects\CSharpDesktop\JiloReadyTwo\Jilo
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Jilo/Jilo/Views/AddAdversmet/Create.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/AddAdversmet/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkQWR2ZXJzbWV0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/AddGames/AddGame.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/AddGames/AddGame.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkR2FtZXNcQWRkR2FtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/Authorization/Index.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/Authorization/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yaXphdGlvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/Home/Index.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/MainPage/Index.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/MainPage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblBhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/ProfileUser/Profile.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/ProfileUser/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVVzZXJcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/Registration/Index.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/Registration/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/SearchTim/SearchUser.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/SearchTim/SearchUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoVGltXFNlYXJjaFVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/SearchTim/UserFind.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/SearchTim/UserFind.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoVGltXFVzZXJGaW5kLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/Shared/Error.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/UpdateOrDelete/UpOrDel.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/UpdateOrDelete/UpOrDel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXBkYXRlT3JEZWxldGVcVXBPckRlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/ViewAdversment/AllUserAdversmet.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/ViewAdversment/AllUserAdversmet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld0FkdmVyc21lbnRcQWxsVXNlckFkdmVyc21ldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/ViewAdversment/ViewAdverstment.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/ViewAdversment/ViewAdverstment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlld0FkdmVyc21lbnRcVmlld0FkdmVyc3RtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/_ViewImports.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/_ViewStart.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Jilo/Jilo/Views/Shared/_Layout.cshtml]
+[D:/Projects/CSharpDesktop/JiloReadyTwo/Jilo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2btkpx2jr2
