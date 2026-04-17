@@ -1,0 +1,40 @@
+services:
+  jilo:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ConnectionStrings__DefaultConnection=Host=postgres-db;Port=5432;Database=jilo;Username=developer;Password=Developer123!
+      - Jwt__Key=qF8zP5kX2vB9yL3wE1rT7uJ6mN4cV0xG2duasjfgiouefrgheruigth34587ghr4578gr545gt 
+      - Jwt__Issuer=https://jilo.com
+      - Jwt__Audience=https://jilo.com
+    ports:
+      - "8080"
+      - "8081"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+
+  postgres-db:
+    environment:
+      - POSTGRES_USER=developer
+      - POSTGRES_PASSWORD=Developer123! 
+      - POSTGRES_DB=jilo
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready", "-U developer", "-d jilo" ]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+ 
+volumes:
+  postgres-data:

@@ -1,0 +1,9 @@
+services:
+  jilo:
+    image: ${DOCKER_REGISTRY-}jilo
+    build:
+      context: .
+      dockerfile: Jilo/Dockerfile
+
+  postgres-db:
+    image: postgres:18

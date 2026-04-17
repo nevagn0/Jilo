@@ -5,14 +5,12 @@ using System.Text;
 using Jilo.Models;
 using Serilog;
 using System.Net.Http.Headers;
-using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<JiloContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -41,7 +39,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
     });
 
-
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Information() // Минимальный уровень логирования
     .WriteTo.File(
@@ -54,88 +51,20 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Title = "Jilo API",
-        Version = "v1",
-        Description = "API для управления играми пользователей"
-    });
-
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-    {
-        Description = "JWT Authorization header. Example: 'Bearer {token}'",
-        Name = "jwt",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer"
-    });
-
-    c.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            new string[] {}
-        }
-    });
-});
-
 builder.Services.AddHttpClient("ApiClient", client =>
 {
     client.BaseAddress = new Uri("https://localhost:7136/");
     client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 });
-builder.Services.AddControllersWithViews();
+
 var app = builder.Build();
-app.Use(async (context, next) =>
-{
-    var endpoint = context.GetEndpoint();
-    if (endpoint?.Metadata?.GetMetadata<AuthorizeAttribute>() != null)
-    {
-        if (!context.User.Identity.IsAuthenticated)
-        {
-            context.Response.Redirect("/Authorization/Index");
-            return;
-        }
-    }
-    await next();
-});
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Jilo API v1");
-        c.OAuthClientId("swagger-ui");
-        c.OAuthAppName("Swagger UI");
-    });
-}
+    using var scope = app.Services.CreateScope();
 
-app.UseStaticFiles();
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
-using (var scope = app.Services.CreateScope())
-{
     var dbContext = scope.ServiceProvider.GetRequiredService<JiloContext>();
+    dbContext.Database.Migrate();
 
     if (!dbContext.Games.Any())
     {
@@ -158,6 +87,18 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.UseStaticFiles();
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+
+app.UseRouting();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -165,9 +106,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Jilo API V1");
-});
 app.Run();
