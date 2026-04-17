@@ -10,12 +10,13 @@ namespace Jilo.Controllers.Api
     [Route("api/Update")]
     public class UpdateApiController : ControllerBase
     {
-
         private readonly JiloContext _context;
+        
         public UpdateApiController(JiloContext context)
         {
             _context = context;
         }
+        
         [HttpGet("Goida")]
         public IActionResult UpOrDel()
         {
@@ -56,6 +57,5 @@ namespace Jilo.Controllers.Api
             await _context.SaveChangesAsync();
             return Ok(new { Success = true });
         }
-
     }
 }

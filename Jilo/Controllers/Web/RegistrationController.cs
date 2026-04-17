@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BCrypt.Net;
 using Jilo.Models;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Headers;
@@ -40,7 +39,7 @@ namespace Jilo.Controllers.Web
             return Json(true);
         }
         [HttpPost]
-        public async Task<IActionResult> Index(Registration model, string returnUrl = null)
+        public async Task<IActionResult> Index(RegistrationRequest model, string returnUrl = null)
         {
             if (!ModelState.IsValid)
             {

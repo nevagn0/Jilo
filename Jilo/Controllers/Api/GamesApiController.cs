@@ -7,6 +7,10 @@ using System.Security.Claims;
 /// <summary>
 /// Добавляет игру пользователю
 /// </summary>
+/// 
+
+namespace Jilo.Controllers.Api;
+
 [Authorize]
 [ApiController]
 [Route("api/games")]
@@ -31,7 +35,6 @@ public class AddGamesApiController : ControllerBase
             var userExists = await _context.Users.AnyAsync(u => u.Id == userId);
             var gameExists = await _context.Games.AnyAsync(g => g.Id == request.GameId);
 
-            
             if (!userExists || !gameExists)
                 return NotFound("Пользователь или игра не найдены");
 
@@ -46,8 +49,6 @@ public class AddGamesApiController : ControllerBase
 
             _context.GamesUsers.Add(gameUser);
             await _context.SaveChangesAsync();
-
-            
 
             return Ok(new { Success = true });
         }

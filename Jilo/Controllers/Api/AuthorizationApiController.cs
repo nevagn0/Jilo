@@ -3,9 +3,9 @@ using Jilo.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace Jilo.Controllers.Api
 {
@@ -15,55 +15,71 @@ namespace Jilo.Controllers.Api
     {
         private readonly JiloContext _context;
         private readonly IConfiguration _configuration;
+        
         public AuthorizationApiController(JiloContext context, IConfiguration configuration)
         {
             _context = context;
             _configuration = configuration;
         }
+        
         [HttpPost("autorization-user")]
-        public async Task<IActionResult> Index([FromBody] Authorization authorization)
+        public async Task<IActionResult> Index([FromBody] AuthorizationRequest authorization)
         {
             if(!ModelState.IsValid) 
             {
                 return BadRequest(ModelState);
             }
-            var us = await _context.Users.FirstOrDefaultAsync(f => f.Username == authorization.Username);
-
-            if (us == null || !BCrypt.Net.BCrypt.Verify(authorization.Password, us.Passwordhash))
+           
+            var user = await _context.Users.FirstOrDefaultAsync(f => f.Username == authorization.Username);
+            if (user == null || !BCrypt.Net.BCrypt.Verify(authorization.Password, user.Passwordhash))
             {
-                return BadRequest(ModelState);
+                return Unauthorized();
             }
-            var token = GenerateJWT(us);
-            Console.WriteLine($"Generated token: {token}");
 
-            
+            var token = GenerateJWT(user);
+            AddTokenToCookie(token);
+
             return Ok(new
             {
-                Token = token,
-                UserId = us.Id,
-                Username = us.Username
+                UserId = user.Id,
+                Username = user.Username
             });
         }
+
+        private void AddTokenToCookie(string token)
+        {
+            HttpContext.Response.Cookies.Append("jwt", token, new CookieOptions()
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(1)
+            });
+        }
+
         private string GenerateJWT(User user)
         {
-            var SecKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
-            var Credentional = new SigningCredentials(SecKey, SecurityAlgorithms.HmacSha256);
+            var tokenHandler = new JsonWebTokenHandler();
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var claims = new[]
+            var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Username),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                new(ClaimTypes.Name, user.Username),
+                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new(ClaimTypes.Role, user.Role ?? string.Empty)
             };
 
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddHours(1),
-                signingCredentials: Credentional
-            );
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            var tokenDescriptor = new SecurityTokenDescriptor()
+            {
+                Subject = new ClaimsIdentity(claims),
+                Audience = _configuration["Jwt:Audience"],
+                Issuer = _configuration["Jwt:Issuer"],
+                SigningCredentials = credentials,
+                Expires = DateTime.UtcNow.AddDays(1)
+            };
+
+            return tokenHandler.CreateToken(tokenDescriptor);
         }
     }
-
 }

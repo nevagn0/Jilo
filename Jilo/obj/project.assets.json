@@ -89,6 +89,28 @@
           "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.targets": {}
         }
       },
+      "Microsoft.AspNetCore.OpenApi/10.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "2.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/Microsoft.AspNetCore.OpenApi.targets": {}
+        }
+      },
       "Microsoft.Build.Framework/18.0.2": {
         "type": "package",
         "compile": {
@@ -738,6 +760,22 @@
           }
         }
       },
+      "Scalar.AspNetCore/2.14.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Scalar.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Serilog/4.3.1": {
         "type": "package",
         "compile": {
@@ -1085,19 +1123,19 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.IdentityModel.Tokens.Jwt/8.17.0": {
+      "System.IdentityModel.Tokens.Jwt/8.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "8.17.0",
-          "Microsoft.IdentityModel.Tokens": "8.17.0"
+          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1",
+          "Microsoft.IdentityModel.Tokens": "8.0.1"
         },
         "compile": {
-          "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
+          "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll": {
+          "lib/net9.0/System.IdentityModel.Tokens.Jwt.dll": {
             "related": ".xml"
           }
         }
@@ -1306,6 +1344,24 @@
         "staticwebassets/V5/lib/jquery/dist/jquery.slim.js",
         "staticwebassets/V5/lib/jquery/dist/jquery.slim.min.js",
         "staticwebassets/V5/lib/jquery/dist/jquery.slim.min.map"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/10.0.6": {
+      "sha512": "WTAQe7MAbbKztRyeCRGZOqqlIqpMHDBz+jKo7LLY6hp4qRqn7iucR24u32KJVxV7mF3tSEfwXH96NgGSiDBw7A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/10.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.OpenApi.SourceGenerators.dll",
+        "build/Microsoft.AspNetCore.OpenApi.targets",
+        "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net10.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.10.0.6.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.Build.Framework/18.0.2": {
@@ -3150,6 +3206,25 @@
         "postgresql.png"
       ]
     },
+    "Scalar.AspNetCore/2.14.0": {
+      "sha512": "YpcCrY+FuPrmFzThm4om8HZ0Lww9vlIQUzUcBpc2Hv4n+oY8SgvFebgBSQJgnaW6y/FgG5J6FU/71HRq/wy9uQ==",
+      "type": "package",
+      "path": "scalar.aspnetcore/2.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net10.0/Scalar.AspNetCore.dll",
+        "lib/net10.0/Scalar.AspNetCore.xml",
+        "lib/net8.0/Scalar.AspNetCore.dll",
+        "lib/net8.0/Scalar.AspNetCore.xml",
+        "lib/net9.0/Scalar.AspNetCore.dll",
+        "lib/net9.0/Scalar.AspNetCore.xml",
+        "scalar.aspnetcore.2.14.0.nupkg.sha512",
+        "scalar.aspnetcore.nuspec"
+      ]
+    },
     "Serilog/4.3.1": {
       "sha512": "savYe7h5yRlkqBVOwP8cIRDOdqKiPmYCU4W87JH38sBmcKD5EBoXvQIw6bNEvZ/pTe1gsiye3VFCzBsoppGkXQ==",
       "type": "package",
@@ -3634,16 +3709,13 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.IdentityModel.Tokens.Jwt/8.17.0": {
-      "sha512": "nKikRYheDeSaXA3wGr2otwaiRFygBa25m+hc7MEomZVIEWZvKVqd8wgP9yn+8QpLRGgw//dUs4LErGx9gtVmAA==",
+    "System.IdentityModel.Tokens.Jwt/8.0.1": {
+      "sha512": "GJw3bYkWpOgvN3tJo5X4lYUeIFA2HD293FPUhKmp7qxS+g5ywAb34Dnd3cDAFLkcMohy5XTpoaZ4uAHuw0uSPQ==",
       "type": "package",
-      "path": "system.identitymodel.tokens.jwt/8.17.0",
+      "path": "system.identitymodel.tokens.jwt/8.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "README.md",
-        "lib/net10.0/System.IdentityModel.Tokens.Jwt.dll",
-        "lib/net10.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/net462/System.IdentityModel.Tokens.Jwt.dll",
         "lib/net462/System.IdentityModel.Tokens.Jwt.xml",
         "lib/net472/System.IdentityModel.Tokens.Jwt.dll",
@@ -3656,7 +3728,7 @@
         "lib/net9.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.8.17.0.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     }
@@ -3667,16 +3739,18 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 10.0.6",
       "Microsoft.AspNetCore.Identity.UI >= 10.0.6",
+      "Microsoft.AspNetCore.OpenApi >= 10.0.6",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.6",
+      "Microsoft.IdentityModel.JsonWebTokens >= 8.17.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.23.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.1",
+      "Scalar.AspNetCore >= 2.14.0",
       "Serilog >= 4.3.1",
       "Serilog.AspNetCore >= 10.0.0",
       "Serilog.Sinks.Console >= 6.1.1",
       "Serilog.Sinks.File >= 7.0.0",
-      "Swashbuckle.AspNetCore >= 10.1.7",
-      "System.IdentityModel.Tokens.Jwt >= 8.17.0"
+      "Swashbuckle.AspNetCore >= 10.1.7"
     ]
   },
   "packageFolders": {
@@ -3747,6 +3821,10 @@
             "target": "Package",
             "version": "[10.0.6, )"
           },
+          "Microsoft.AspNetCore.OpenApi": {
+            "target": "Package",
+            "version": "[10.0.6, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -3759,6 +3837,10 @@
             "target": "Package",
             "version": "[10.0.6, )"
           },
+          "Microsoft.IdentityModel.JsonWebTokens": {
+            "target": "Package",
+            "version": "[8.17.0, )"
+          },
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
             "version": "[1.23.0, )"
@@ -3766,6 +3848,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[10.0.1, )"
+          },
+          "Scalar.AspNetCore": {
+            "target": "Package",
+            "version": "[2.14.0, )"
           },
           "Serilog": {
             "target": "Package",
@@ -3786,10 +3872,6 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[10.1.7, )"
-          },
-          "System.IdentityModel.Tokens.Jwt": {
-            "target": "Package",
-            "version": "[8.17.0, )"
           }
         },
         "imports": [

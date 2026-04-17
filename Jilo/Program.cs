@@ -5,11 +5,13 @@ using System.Text;
 using Jilo.Models;
 using Serilog;
 using System.Net.Http.Headers;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<JiloContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -32,7 +34,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             OnMessageReceived = context =>
             {
-                context.Token = context.Request.Cookies["jwt"];
+                if(context.Request.Cookies.TryGetValue("jwt", out var token))
+                {
+                    context.Token = token;
+                }
+
                 return Task.CompletedTask;
             }
         };
@@ -61,6 +67,9 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    app.MapOpenApi();
+    app.MapScalarApiReference();
+
     using var scope = app.Services.CreateScope();
 
     var dbContext = scope.ServiceProvider.GetRequiredService<JiloContext>();
